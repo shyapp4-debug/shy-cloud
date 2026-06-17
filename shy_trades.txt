@@ -1,0 +1,550 @@
+QQQ BREAKOUT
+QQQ: 721.34
+-----------------
+2026-06-15 01:08:27.336613
+QQQ BREAKOUT
+QQQ: 721.34
+SPY: 741.75
+-----------------
+2026-06-15 01:44:18.793970
+QQQ BREAKOUT
+QQQ: 721.34
+SPY: 741.75
+-----------------
+2026-06-15 19:34:27.342851
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+-----------------
+2026-06-15 19:36:36.216455
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+-----------------
+2026-06-15 19:43:44.857113
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+-----------------
+2026-06-15 19:52:32.013993
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+-----------------
+2026-06-15 19:58:40.048231
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+-----------------
+2026-06-15 20:04:02.792435
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+-----------------
+2026-06-15 20:10:52.888684
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+-----------------
+2026-06-15 20:15:34.196894
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:17:43.935070
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:18:48.738345
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:19:54.039718
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:20:59.538433
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:22:04.967544
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:23:10.353915
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:24:15.427118
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:25:22.237670
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:26:27.184993
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:27:33.477226
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:28:38.730725
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:29:44.095248
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:30:48.822837
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:31:54.365642
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:32:59.651279
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:34:04.815928
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:35:10.153969
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:36:15.604197
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:37:21.063297
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:38:26.181131
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:39:31.374457
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:39:53.839486
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:40:37.033085
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:41:43.699043
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:42:49.342270
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 20:53:12.588371
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 21:08:06.707535
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 22:23:46.428128
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 22:43:36.816051
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 23:03:32.084628
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 23:15:59.472137
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 23:26:37.011276
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 23:47:05.698176
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-15 23:56:15.540231
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-16 00:05:14.226655
+QQQ BREAKOUT
+QQQ: 744.0
+SPY: 754.83
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-16 09:17:22.808928
+QQQ BREAKOUT
+QQQ: 741.71
+SPY: 754.49
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-16 09:28:27.136697
+QQQ BREAKOUT
+QQQ: 739.8301
+SPY: 753.46
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-16 10:23:41.573281
+QQQ BREAKOUT
+QQQ: 736.0
+SPY: 752.8
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-16 10:35:49.582362
+QQQ BREAKOUT
+QQQ: 736.42
+SPY: 753.35
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-16 21:24:18.929657
+QQQ BREAKOUT
+QQQ: 729.86
+SPY: 750.33
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-16 21:44:10.124510
+QQQ BREAKOUT
+QQQ: 729.86
+SPY: 750.33
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-16 22:06:04.751721
+QQQ BREAKOUT
+QQQ: 729.86
+SPY: 750.33
+Grade: A
+Entry: 725
+Stop: 723
+Target: 728
+RiskReward: 1:1.5
+-----------------
+2026-06-16 22:28:06.366880
+NO TRADE
+QQQ: 729.86
+SPY: 750.33
+2026-06-16 22:33:08.937696
+NO TRADE
+QQQ: 729.86
+SPY: 750.33
+Grade: N/A
+Entry: 0
+Stop: 0
+Target: 0
+RiskReward: 1:0
+-----------------
+2026-06-16 22:43:33.049179
+NO TRADE
+QQQ: 729.86
+SPY: 750.33
+Grade: N/A
+Entry: 0
+Stop: 0
+Target: 0
+RiskReward: 1:0
+-----------------
+2026-06-16 22:52:01.034715
+NO TRADE
+QQQ: 729.86
+SPY: 750.33
+Grade: N/A
+Entry: 0
+Stop: 0
+Target: 0
+RiskReward: 1:0
+-----------------
+2026-06-16 23:05:31.971470 | NEUTRAL / WAIT | Score: 1 | QQQ: 729.86 | SPY: 750.33
+2026-06-16 23:05:31.973398
+NO TRADE
+QQQ: 729.86
+SPY: 750.33
+Grade: N/A
+Entry: 0
+Stop: 0
+Target: 0
+RiskReward: 1:0
+-----------------
+2026-06-16 23:14:18.060784 | NEUTRAL / WAIT | Score: 1 | QQQ: 729.86 | SPY: 750.33
+2026-06-16 23:14:18.062453
+NO TRADE
+QQQ: 729.86
+SPY: 750.33
+Grade: N/A
+Entry: 0
+Stop: 0
+Target: 0
+RiskReward: 1:0
+-----------------
+2026-06-16 23:32:16.153396 | NEUTRAL / WAIT | Score: 1 | QQQ: 729.86 | SPY: 750.33
+2026-06-16 23:32:16.154216
+NO TRADE
+QQQ: 729.86
+SPY: 750.33
+Grade: N/A
+Entry: 0
+Stop: 0
+Target: 0
+RiskReward: 1:0
+-----------------
+2026-06-16 23:33:21.638304 | NEUTRAL / WAIT | Score: 1 | QQQ: 729.86 | SPY: 750.33
+2026-06-16 23:34:23.629792 | NEUTRAL / WAIT | Score: 1 | QQQ: 729.86 | SPY: 750.33
+2026-06-16 23:35:25.590303 | NEUTRAL / WAIT | Score: 1 | QQQ: 729.86 | SPY: 750.33
+2026-06-16 23:36:27.622805 | NEUTRAL / WAIT | Score: 1 | QQQ: 729.86 | SPY: 750.33
+2026-06-16 23:37:29.642147 | NEUTRAL / WAIT | Score: 1 | QQQ: 729.86 | SPY: 750.33
