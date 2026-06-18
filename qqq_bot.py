@@ -36,18 +36,21 @@ while True:
         time.sleep(300)
         continue
 
-    prices = {
-        "SPX": yf.Ticker("^GSPC").info["regularMarketPrice"],
-        "QQQ": yf.Ticker("QQQ").info["regularMarketPrice"],
-        "SPY": yf.Ticker("SPY").info["regularMarketPrice"],
-        "TSLA": yf.Ticker("TSLA").info["regularMarketPrice"],
-        "MU": yf.Ticker("MU").info["regularMarketPrice"],
-        "BRK.B": yf.Ticker("BRK-B").info["regularMarketPrice"],
-        "QBTS": yf.Ticker("QBTS").info["regularMarketPrice"],
-        "IONQ": yf.Ticker("IONQ").info["regularMarketPrice"],
-        "QQQM": yf.Ticker("QQQM").info["regularMarketPrice"],
-        "TQQQ": yf.Ticker("TQQQ").info["regularMarketPrice"],
-    }
+    symbols = ["^GSPC", "QQQ", "SPY", "TSLA", "MU", "BRK-B", "QBTS", "IONQ", "QQQM", "TQQQ"]
+
+    prices = {}
+
+    for symbol in symbols:
+        try:
+            ticker = yf.Ticker(symbol)
+            price = ticker.fast_info["last_price"]
+            display_symbol = "SPX" if symbol == "^GSPC" else "BRK.B" if symbol == "BRK-B" else symbol
+            prices[display_symbol] = round(price, 2)
+            time.sleep(2)
+        except Exception as e:
+            display_symbol = "SPX" if symbol == "^GSPC" else "BRK.B" if symbol == "BRK-B" else symbol
+            prices[display_symbol] = 0
+    print(f"{display_symbol}: unavailable")
 
     print("\n----- SHY MARKET DASHBOARD -----")
 
