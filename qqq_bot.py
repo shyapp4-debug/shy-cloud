@@ -233,8 +233,8 @@ while True:
         except:
             print(f"{stock}: unavailable")
 
-    time.sleep(60)
-    import time
+    time.sleep(300)
+    
 
 
 
