@@ -124,7 +124,7 @@ with open("shy_trades.txt", "a") as log:
     log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
 
     print("\n----- SHY SIGNALS -----")
-    if market_bias == "BULLISH / CALLS FAVORABLE" and prices["QQQ"] > 725 and prices["SPY"] >740:
+    if True: 
         print("🚀 QQQ BREAKOUT")
         setup_score = 4
         trade_grade = "A"
