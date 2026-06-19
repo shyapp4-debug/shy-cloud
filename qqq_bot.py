@@ -161,6 +161,7 @@ with open("shy_trades.txt", "a") as log:
     Signal: {signal}
     Setup Score: {setup_score}/5
     Trade Grade: {trade_grade}
+    Trade Direction: {trade_direction}
 
     QQQ: {prices['QQQ']}
     Market Bias: {market_bias}
