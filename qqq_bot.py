@@ -158,20 +158,20 @@ with open("shy_trades.txt", "a") as log:
         send_email(
             "SHY CALL ALERT",
             f"""
-    Signal: {signal}
-    Setup Score: {setup_score}/5
-    Trade Grade: {trade_grade}
-    Trade Direction: {trade_direction}
+    Ticker: QQQ
+Signal: {signal}
+Direction: {trade_direction}
 
-    QQQ: {prices['QQQ']}
-    Market Bias: {market_bias}
-    Trade Grade: {trade_grade}
-    Entry: 725
-    Stop: 723
-    Target: 728
-    Risk/Reward: 1:2
-    Action: WATCH CALLS
+Entry: {entry}
+Stop: {stop}
+Target: {target_price}
+Risk/Reward: 1:{risk_reward}
 
+Market Bias: {market_bias}
+Setup Score: {setup_score}/5
+Trade Grade: {trade_grade}
+
+Action: WATCH {trade_direction}
     TSLA: {prices['TSLA']}
     IONQ: {prices['IONQ']}
     QBTS: {prices['QBTS']}
