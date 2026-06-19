@@ -113,12 +113,12 @@ while True:
         trade_grade = "NO TRADE"
         trade_direction = "WAIT"
 
-        print(f"Setup Score: {setup_score}/5")
-        print(f"Trade Grade: {trade_grade}")
-        print(f"Trade Direction: {trade_direction}")
+    print(f"Setup Score: {setup_score}/5")
+    print(f"Trade Grade: {trade_grade}")
+    print(f"Trade Direction: {trade_direction}")
     
-    if market_bias == "NEUTRAL / WAIT":
-        print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
+if market_bias == "NEUTRAL / WAIT":
+    print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
 
         with open("shy_trades.txt", "a") as log:
             log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
