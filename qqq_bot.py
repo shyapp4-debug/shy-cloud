@@ -113,9 +113,9 @@ while True:
         trade_grade = "NO TRADE"
         trade_direction = "WAIT"
 
-print(f"Setup Score: {setup_score}/5")
-print(f"Trade Grade: {trade_grade}")
-print(f"Trade Direction: {trade_direction}")
+        print(f"Setup Score: {setup_score}/5")
+        print(f"Trade Grade: {trade_grade}")
+        print(f"Trade Direction: {trade_direction}")
     
     if market_bias == "NEUTRAL / WAIT":
         print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
