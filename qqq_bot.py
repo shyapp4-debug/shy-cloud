@@ -87,6 +87,35 @@ while True:
 
     print(f"Market Bias Score: {bias_score}")
     print("Market Bias:", market_bias)
+
+    setup_score = 0
+    trade_grade = "NO TRADE"
+    trade_direction = "WAIT"
+
+    if market_bias == "STRONG BULLISH":
+        setup_score = 5
+        trade_grade = "A+"
+        trade_direction = "CALL"
+    elif market_bias == "BULLISH":
+        setup_score = 4
+        trade_grade = "A"
+        trade_direction = "CALL"
+    elif market_bias == "STRONG BEARISH":
+        setup_score = 5
+        trade_grade = "A+"
+        trade_direction = "PUT"
+    elif market_bias == "BEARISH":
+        setup_score = 4
+        trade_grade = "A"
+        trade_direction = "PUT"
+    else:
+        setup_score = 1
+        trade_grade = "NO TRADE"
+        trade_direction = "WAIT"
+
+print(f"Setup Score: {setup_score}/5")
+print(f"Trade Grade: {trade_grade}")
+print(f"Trade Direction: {trade_direction}")
     
     if market_bias == "NEUTRAL / WAIT":
         print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
