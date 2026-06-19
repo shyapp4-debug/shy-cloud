@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 from datetime import datetime
 EMAIL_ADDRESS = "shyapp4@gmail.com"
 EMAIL_PASSWORD = " cyfr uujx leei jarn"
-SEND_TO = "shyapp4@gmail.com"
+SEND_TO = "cecilshy8@yahoo.com"
 def send_email(subject, body):
     msg = MIMEText(body)
     msg["Subject"] = subject
