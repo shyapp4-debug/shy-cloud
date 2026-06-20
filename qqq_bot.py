@@ -30,6 +30,8 @@ risk_reward = 0
 trade_count = 0
 max_trades = 3
 while True:
+    
+    print("checking market...")
 
     if trade_count >= max_trades:
         print("DAILY TRADE LIMIT REACHED")
