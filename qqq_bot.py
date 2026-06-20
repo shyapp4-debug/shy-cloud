@@ -143,7 +143,7 @@ with open("shy_trades.txt", "a") as log:
         print("CALLS FAVORABLE")
         signal = "QQQ BREAKOUT"
 
-    if True:
+    if signal !=last_signal:
         with open("shy_trades.txt", "a") as log:
             log.write(f"{datetime.now()}\n")
             log.write(f"{signal}\n")
