@@ -46,7 +46,7 @@ while True:
             price = ticker.fast_info["last_price"]
             display_symbol = "SPX" if symbol == "^GSPC" else "BRK.B" if symbol == "BRK-B" else symbol
             prices[display_symbol] = round(price, 2)
-            time.sleep(60)
+            time.sleep(1)
         except Exception as e:
             display_symbol = "SPX" if symbol == "^GSPC" else "BRK.B" if symbol == "BRK-B" else symbol
             prices[display_symbol] = 0
