@@ -38,7 +38,7 @@ while True:
         time.sleep(300)
         continue
 
-    symbols = ["^GSPC", "QQQ", "SPY", "TSLA", "MU", "BRK-B", "QBTS", "IONQ", "QQQM", "TQQQ"]
+    symbols = ["^GSPC", "QQQ", "SPY", "TQQQ", "TSLA", "NVDA", "AMD", "PLTR", "SPCX", "RKLB", "ASTS", "LUNR", "IONQ", "QBTS", "AAPL"]
 
     prices = {}
 
