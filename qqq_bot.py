@@ -39,7 +39,6 @@ while True:
         continue
 
     symbols = ["^GSPC", "QQQ", "SPY", "TQQQ", "TSLA", "NVDA", "AMD", "PLTR", "SPCX", "RKLB", "ASTS", "LUNR", "IONQ", "QBTS", "AAPL"]
-
     prices = {}
 
     for symbol in symbols:
