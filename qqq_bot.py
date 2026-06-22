@@ -147,21 +147,21 @@ while True:
 
     print(f"Best Call Candidate: {best_call}")
     print(f"Best Put Candidate: {best_put}")
-        sorted_prices = sorted(
+    sorted_prices = sorted(
         prices.items(),
         key=lambda x: x[1],
         reverse=True
     )
 
-for i, (ticker, price) in enumerate(sorted_prices[:5], start=1):
-    print(f"#{i} {ticker}: {price}")
-if market_bias == "NEUTRAL / WAIT":
-    print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
+    for i, (ticker, price) in enumerate(sorted_prices[:5], start=1):
+        print(f"#{i} {ticker}: {price}")
+    if market_bias == "NEUTRAL / WAIT":
+        print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
 
-with open("shy_trades.txt", "a") as log:
-    log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
+    with open("shy_trades.txt", "a") as log:
+        log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
 
-    print("\n----- SHY SIGNALS -----")
+        print("\n----- SHY SIGNALS -----")
     if prices["QQQ"] > 725 and prices["SPY"] > 750:
         print("🚀 QQQ BREAKOUT")
         setup_score = 4
