@@ -187,24 +187,24 @@ if market_bias == "NEUTRAL / WAIT":
         log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
 
 print("\n----- SHY SIGNALS -----")
-if prices["QQQ"] > 725 and prices["SPY"] > 740:
-    print("🚀 QQQ BREAKOUT")
-    setup_score = 4
-    trade_grade = "A"
-    entry = 725
-    stop = 723
-    target_price = 728
-    risk = entry - stop
-    reward = target_price - entry
-    risk_reward = round(reward / risk, 2)
-    print(f"Setup Score: {setup_score}/5")
-    print(f"Trade Grade: {trade_grade}")
-    print(f"Entry: {entry}")
-    print(f"Stop: {stop}")
-    print(f"Target: {target_price}")
-    print(f"Risk/Reward: 1:{risk_reward}")
-    print("CALLS FAVORABLE")
-    signal = "QQQ BREAKOUT"
+    if prices["QQQ"] > 725 and prices["SPY"] > 740:
+        print("🚀 QQQ BREAKOUT")
+        setup_score = 4
+        trade_grade = "A"
+        entry = 725
+        stop = 723
+        target_price = 728
+        risk = entry - stop
+        reward = target_price - entry
+        risk_reward = round(reward / risk, 2)
+        print(f"Setup Score: {setup_score}/5")
+        print(f"Trade Grade: {trade_grade}")
+        print(f"Entry: {entry}")
+        print(f"Stop: {stop}")
+        print(f"Target: {target_price}")
+        print(f"Risk/Reward: 1:{risk_reward}")
+        print("CALLS FAVORABLE")
+        signal = "QQQ BREAKOUT"
 
     if signal != last_signal and trade_grade in ["A+", "A"]:
         with open("shy_trades.txt", "a") as log:
