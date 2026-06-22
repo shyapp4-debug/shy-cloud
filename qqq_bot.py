@@ -132,8 +132,22 @@ while True:
     print(f"Top Price: {top_price}")
     print(f"Trade Direction: {trade_direction}")
     print("\n----- SHY LEADERBOARD -----")
+    
+    best_call = None
+    best_put = None
 
-    sorted_prices = sorted(
+    for symbol in symbols:
+        if symbol in prices:
+
+            if best_call is None or prices[symbol] > prices.get(best_call, 0):
+                best_call = symbol
+
+            if best_put is None or prices[symbol] < prices.get(best_put, 999999):
+                best_put = symbol
+
+    print(f"Best Call Candidate: {best_call}")
+    print(f"Best Put Candidate: {best_put}")
+        sorted_prices = sorted(
         prices.items(),
         key=lambda x: x[1],
         reverse=True
