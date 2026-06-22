@@ -208,16 +208,16 @@ if prices["QQQ"] > 725 and prices["SPY"] > 740:
 
         if signal != last_signal and trade_grade in ["A+", "A"]:
             with open("shy_trades.txt", "a") as log:
-            log.write(f"{datetime.now()}\n")
-            log.write(f"{signal}\n")
-            log.write(f"QQQ: {prices['QQQ']}\n")
-            log.write(f"SPY: {prices['SPY']}\n")
-            log.write(f"Grade: {trade_grade}\n")
-            log.write(f"Entry: {entry}\n")
-            log.write(f"Stop: {stop}\n")
-            log.write(f"Target: {target_price}\n")
-            log.write(f"RiskReward: 1:{risk_reward}\n")
-            log.write("-----------------\n")
+                log.write(f"{datetime.now()}\n")
+                log.write(f"{signal}\n")
+                log.write(f"QQQ: {prices['QQQ']}\n")
+                log.write(f"SPY: {prices['SPY']}\n")
+                log.write(f"Grade: {trade_grade}\n")
+                log.write(f"Entry: {entry}\n")
+                log.write(f"Stop: {stop}\n")
+                log.write(f"Target: {target_price}\n")
+                log.write(f"RiskReward: 1:{risk_reward}\n")
+                log.write("-----------------\n")
         send_email(
             "SHY CALL ALERT",
             f"""
