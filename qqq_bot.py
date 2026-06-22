@@ -242,7 +242,3 @@ Action: WATCH {trade_direction}
     """
         )
         last_signal = signal
-
-        target = "QQQ TARGET HIT"
-
-        
