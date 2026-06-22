@@ -206,8 +206,8 @@ if prices["QQQ"] > 725 and prices["SPY"] > 740:
         print("CALLS FAVORABLE")
         signal = "QQQ BREAKOUT"
 
-    if signal != last_signal and trade_grade in ["A+", "A"]:
-        with open("shy_trades.txt", "a") as log:
+        if signal != last_signal and trade_grade in ["A+", "A"]:
+            with open("shy_trades.txt", "a") as log:
             log.write(f"{datetime.now()}\n")
             log.write(f"{signal}\n")
             log.write(f"QQQ: {prices['QQQ']}\n")
