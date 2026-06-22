@@ -147,6 +147,19 @@ while True:
 
     print(f"Best Call Candidate: {best_call}")
     print(f"Best Put Candidate: {best_put}")
+    send_email(
+        "SHY WATCHLIST ALERT",
+        f"""
+        Best Call Candidate: {best_call}
+
+        Best Put Candidate: {best_put}
+
+        Market Bias: {market_bias}
+        Trade Grade: {trade_grade}
+
+        Action: WATCH
+        """
+    )
 sorted_prices = sorted(
     prices.items(),
     key=lambda x: x[1],
