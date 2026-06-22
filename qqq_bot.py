@@ -170,19 +170,8 @@ while True:
     """
         )
 
-            with open("last_alert.txt", "w") as f:
-                f.write(current_alert)
-        f"""
-        Best Call Candidate: {best_call}
-
-        Best Put Candidate: {best_put}
-
-        Market Bias: {market_bias}
-        Trade Grade: {trade_grade}
-
-        Action: WATCH
-        """
-    )
+        with open("last_alert.txt", "w") as f:
+            f.write(current_alert)
 sorted_prices = sorted(
     prices.items(),
     key=lambda x: x[1],
