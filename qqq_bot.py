@@ -38,7 +38,8 @@ while True:
         time.sleep(300)
         continue
 
-    symbols = ["^GSPC", "QQQ", "SPY", "TQQQ", "TSLA", "NVDA", "AMD", "PLTR", "SPCX", "RKLB", "ASTS", "LUNR", "IONQ", "QBTS", "AAPL"]
+    with open("watchlist.txt", "r") as f:
+        symbols = [line.strip() for line in f if line.strip()]
     prices = {}
 
     for symbol in symbols:
