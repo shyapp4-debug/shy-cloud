@@ -131,7 +131,16 @@ while True:
     print(f"Top Ticker: {top_ticker}")
     print(f"Top Price: {top_price}")
     print(f"Trade Direction: {trade_direction}")
+    print("\n----- SHY LEADERBOARD -----")
 
+    sorted_prices = sorted(
+        prices.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )
+
+for i, (ticker, price) in enumerate(sorted_prices[:5], start=1):
+print(f"#{i} {ticker}: {price}")
 if market_bias == "NEUTRAL / WAIT":
     print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
 
