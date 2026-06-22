@@ -140,7 +140,7 @@ while True:
     )
 
 for i, (ticker, price) in enumerate(sorted_prices[:5], start=1):
-print(f"#{i} {ticker}: {price}")
+    print(f"#{i} {ticker}: {price}")
 if market_bias == "NEUTRAL / WAIT":
     print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
 
