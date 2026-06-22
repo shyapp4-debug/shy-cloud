@@ -117,6 +117,19 @@ while True:
 
     print(f"Setup Score: {setup_score}/5")
     print(f"Trade Grade: {trade_grade}")
+    print("\n----- SHY WATCHLIST SCANNER -----")
+
+    top_ticker = None
+    top_price = 0
+
+    for symbol in symbols:
+        if symbol in prices:
+            if prices[symbol] > top_price:
+                top_price = prices[symbol]
+                top_ticker = symbol
+
+    print(f"Top Ticker: {top_ticker}")
+    print(f"Top Price: {top_price}")
     print(f"Trade Direction: {trade_direction}")
 
 if market_bias == "NEUTRAL / WAIT":
