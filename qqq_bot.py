@@ -147,8 +147,31 @@ while True:
 
     print(f"Best Call Candidate: {best_call}")
     print(f"Best Put Candidate: {best_put}")
-    send_email(
-        "SHY WATCHLIST ALERT",
+    current_alert = f"{best_call}-{best_put}-{market_bias}-{trade_grade}"
+
+    try:
+        with open("last_alert.txt", "r") as f:
+            last_alert = f.read().strip()
+    except:
+        last_alert = ""
+
+    if current_alert != last_alert:
+        send_email(
+            "SHY WATCHLIST ALERT",
+            f"""
+    Best Call Candidate: {best_call}
+
+    Best Put Candidate: {best_put}
+
+    Market Bias: {market_bias}
+    Trade Grade: {trade_grade}
+
+    Action: WATCH
+    """
+        )
+
+            with open("last_alert.txt", "w") as f:
+                f.write(current_alert)
         f"""
         Best Call Candidate: {best_call}
 
