@@ -218,27 +218,27 @@ if True:
                 log.write(f"Target: {target_price}\n")
                 log.write(f"RiskReward: 1:{risk_reward}\n")
                 log.write("-----------------\n")
-        send_email(
-            "SHY QQQ CALL ALERT",
-            f"""
-    Ticker: QQQ
-Signal: {signal}
-Direction: {trade_direction}
-
-Entry: {entry}
-Stop: {stop}
-Target: {target_price}
-Risk/Reward: 1:{risk_reward}
-
-Market Bias: {market_bias}
-Setup Score: {setup_score}/5
-Trade Grade: {trade_grade}
-
-Action: WATCH {trade_direction}
-    TSLA: {prices['TSLA']}
-    IONQ: {prices['IONQ']}
-    QBTS: {prices['QBTS']}
-    TQQQ: {prices['TQQQ']}
-    """
-        )
-        last_signal = signal
+            send_email(
+                "SHY QQQ CALL ALERT",
+                f"""
+                Ticker: QQQ
+                Signal: {signal}
+                Direction: {trade_direction}
+                
+                Entry: {entry}
+                Stop: {stop}
+                Target: {target_price}
+                Risk/Reward: 1:{risk_reward}
+                
+                Market Bias: {market_bias}
+                Setup Score: {setup_score}/5
+                Trade Grade: {trade_grade}
+                
+                Action: WATCH {trade_direction}
+                    TSLA: {prices['TSLA']}
+                    IONQ: {prices['IONQ']}
+                    QBTS: {prices['QBTS']}
+                    TQQQ: {prices['TQQQ']}
+                    """
+                )
+                last_signal = signal
