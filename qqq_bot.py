@@ -219,7 +219,7 @@ if prices["QQQ"] > 725 and prices["SPY"] > 740:
                 log.write(f"RiskReward: 1:{risk_reward}\n")
                 log.write("-----------------\n")
         send_email(
-            "SHY CALL ALERT",
+            "SHY QQQ CALL ALERT",
             f"""
     Ticker: QQQ
 Signal: {signal}
