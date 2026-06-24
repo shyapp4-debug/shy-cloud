@@ -241,4 +241,4 @@ if True:
                     TQQQ: {prices['TQQQ']}
                     """
             )
-        last_signal = signal
+            last_signal = signal
