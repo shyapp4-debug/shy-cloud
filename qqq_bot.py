@@ -157,7 +157,7 @@ while True:
 
     if False:
         send_email(
-            "SHY WATCHLIST ALERT",
+            "SHY TEST ALERT",
             f"""
     Best Call Candidate: {best_call}
 
