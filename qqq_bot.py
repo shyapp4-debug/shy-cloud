@@ -187,7 +187,7 @@ if market_bias == "NEUTRAL / WAIT":
         log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
 
 print("\n----- SHY SIGNALS -----")
-if prices["QQQ"] > 725 and prices["SPY"] > 740:
+if prices["QQQ"] > 725 and prices["SPY"] > 740;
         print("🚀 QQQ BREAKOUT")
         setup_score = 4
         trade_grade = "A"
