@@ -155,7 +155,7 @@ while True:
     except:
         last_alert = ""
 
-    if False:
+    if current_alert != last_alert:
         send_email(
             "SHY TEST ALERT",
             f"""
