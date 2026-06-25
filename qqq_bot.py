@@ -155,7 +155,7 @@ while True:
     except:
         last_alert = ""
 
-    if False:
+    if current_alert != last_alert
         send_email(
             "SHY WATCHLIST ALERT",
             f"""
@@ -199,8 +199,7 @@ if True:
         risk_reward = round(reward / risk, 2)
         print(f"Setup Score: {setup_score}/5")
         print(f"Trade Grade: {trade_grade}")
-        print(f"Entry: {entry}")
-        print(f"Stop: {stop}")
+        print(f"Entry: {entry}")        print(f"Stop: {stop}")
         print(f"Target: {target_price}")
         print(f"Risk/Reward: 1:{risk_reward}")
         print("CALLS FAVORABLE")
@@ -218,6 +217,7 @@ if True:
                 log.write(f"Target: {target_price}\n")
                 log.write(f"RiskReward: 1:{risk_reward}\n")
                 log.write("-----------------\n")
+            print("SENDING QQQ CALL ALERT EMAIL NOW")
             send_email(
                 "SHY QQQ CALL ALERT",
                 f"""
