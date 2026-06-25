@@ -155,7 +155,7 @@ while True:
     except:
         last_alert = ""
 
-    if current_alert != last_alert:
+    if False:
         send_email(
             "SHY WATCHLIST ALERT",
             f"""
@@ -234,7 +234,7 @@ if True:
         Setup Score: {setup_score}/5
         Trade Grade: {trade_grade}
                 
-        Recommended Action: Enter {trade_direction} NOW
+        Action: Enter {trade_direction}
         TSLA: {prices['TSLA']}
         IONQ: {prices['IONQ']}
         QBTS: {prices['QBTS']}
