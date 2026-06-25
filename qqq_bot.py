@@ -157,7 +157,7 @@ while True:
 
     if current_alert != last_alert:
         send_email(
-            "SHY TEST ALERT",
+            "SHY WATHLIST ALERT",
             f"""
     Best Call Candidate: {best_call}
 
