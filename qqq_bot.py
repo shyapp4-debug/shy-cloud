@@ -61,12 +61,12 @@ while True:
 
     bias_score = 0
 
-    if prices["QQQ"] > 730:
+    if prices["QQQ"] > 700:
         bias_score += 1
     else:
         bias_score -= 1
 
-    if prices["SPY"] > 750:
+    if prices["SPY"] > 730:
         bias_score += 1
     else:
         bias_score -= 1
