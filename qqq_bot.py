@@ -157,7 +157,7 @@ while True:
 
     if current_alert != last_alert:
         send_email(
-            "SHY WATHLIST ALERT",
+            "SHY WATCHLIST ALERT",
             f"""
     Best Call Candidate: {best_call}
 
@@ -206,7 +206,7 @@ if True:
         print("CALLS FAVORABLE")
         signal = "QQQ BREAKOUT"
 
-        if True:
+        if signal != last_signal and trade_grade in ["A+", "A"]:
             with open("shy_trades.txt", "a") as log:
                 log.write(f"{datetime.now()}\n")
                 log.write(f"{signal}\n")
@@ -221,24 +221,24 @@ if True:
             send_email(
                 "SHY QQQ CALL ALERT",
                 f"""
-                Ticker: QQQ
-                Signal: {signal}
-                Direction: {trade_direction}
+        Ticker: QQQ
+        Signal: {signal}
+        Direction: {trade_direction}
                 
-                Entry: {entry}
-                Stop: {stop}
-                Target: {target_price}
-                Risk/Reward: 1:{risk_reward}
+        Entry: {entry}
+        Stop: {stop}
+        Target: {target_price}
+        Risk/Reward: 1:{risk_reward}
                 
-                Market Bias: {market_bias}
-                Setup Score: {setup_score}/5
-                Trade Grade: {trade_grade}
+        Market Bias: {market_bias}
+        Setup Score: {setup_score}/5
+        Trade Grade: {trade_grade}
                 
-                Action: WATCH {trade_direction}
-                    TSLA: {prices['TSLA']}
-                    IONQ: {prices['IONQ']}
-                    QBTS: {prices['QBTS']}
-                    TQQQ: {prices['TQQQ']}
-                    """
+        Recommended Action: Enter {trade_direction} NOW
+        TSLA: {prices['TSLA']}
+        IONQ: {prices['IONQ']}
+        QBTS: {prices['QBTS']}
+        TQQQ: {prices['TQQQ']}
+        """
             ) 
-        last_signal = signal
+            last_signal = signal
