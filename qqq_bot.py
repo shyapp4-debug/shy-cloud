@@ -174,75 +174,75 @@ while True:
             f.write(current_alert)
             print("WATCHLIST EMAIL SENT")
             print("CONTINUING TO SIGNALS...")
-sorted_prices = sorted(
-    prices.items(),
-    key=lambda x: x[1],
-    reverse=True
-)
-
-for i, (ticker, price) in enumerate(sorted_prices[:5], start=1):
-    print(f"#{i} {ticker}: {price}")
+    sorted_prices = sorted(
+        prices.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )
     
-if market_bias == "NEUTRAL / WAIT":
-    print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
-
-    with open("shy_trades.txt", "a") as log:
-        log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
-
-print("\n----- SHY SIGNALS -----")
-if True:
-        print("🚀 QQQ BREAKOUT")
-        setup_score = 4
-        trade_grade = "A"
-        entry = 725
-        stop = 723
-        target_price = 728
-        risk = entry - stop
-        reward = target_price - entry
-        risk_reward = round(reward / risk, 2)
-        print(f"Setup Score: {setup_score}/5")
-        print(f"Trade Grade: {trade_grade}")
-        print(f"Entry: {entry}")        
-        print(f"Stop: {stop}")
-        print(f"Target: {target_price}")
-        print(f"Risk/Reward: 1:{risk_reward}")
-        print("CALLS FAVORABLE")
-        signal = "QQQ BREAKOUT"
-
-        if signal != last_signal and trade_grade in ["A+", "A"]:
-            with open("shy_trades.txt", "a") as log:
-                log.write(f"{datetime.now()}\n")
-                log.write(f"{signal}\n")
-                log.write(f"QQQ: {prices['QQQ']}\n")
-                log.write(f"SPY: {prices['SPY']}\n")
-                log.write(f"Grade: {trade_grade}\n")
-                log.write(f"Entry: {entry}\n")
-                log.write(f"Stop: {stop}\n")
-                log.write(f"Target: {target_price}\n")
-                log.write(f"RiskReward: 1:{risk_reward}\n")
-                log.write("-----------------\n")
-            print("SENDING QQQ CALL ALERT EMAIL NOW")
-            send_email(
-                "SHY QQQ CALL ALERT",
-                f"""
-        Ticker: QQQ
-        Signal: {signal}
-        Direction: {trade_direction}
-                
-        Entry: {entry}
-        Stop: {stop}
-        Target: {target_price}
-        Risk/Reward: 1:{risk_reward}
-                
-        Market Bias: {market_bias}
-        Setup Score: {setup_score}/5
-        Trade Grade: {trade_grade}
-                
-        Action: Enter {trade_direction}
-        TSLA: {prices['TSLA']}
-        IONQ: {prices['IONQ']}
-        QBTS: {prices['QBTS']}
-        TQQQ: {prices['TQQQ']}
-        """
-            ) 
-            last_signal = signal
+    for i, (ticker, price) in enumerate(sorted_prices[:5], start=1):
+        print(f"#{i} {ticker}: {price}")
+        
+    if market_bias == "NEUTRAL / WAIT":
+        print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
+    
+        with open("shy_trades.txt", "a") as log:
+            log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
+    
+    print("\n----- SHY SIGNALS -----")
+    if True:
+            print("🚀 QQQ BREAKOUT")
+            setup_score = 4
+            trade_grade = "A"
+            entry = 725
+            stop = 723
+            target_price = 728
+            risk = entry - stop
+            reward = target_price - entry
+            risk_reward = round(reward / risk, 2)
+            print(f"Setup Score: {setup_score}/5")
+            print(f"Trade Grade: {trade_grade}")
+            print(f"Entry: {entry}")        
+            print(f"Stop: {stop}")
+            print(f"Target: {target_price}")
+            print(f"Risk/Reward: 1:{risk_reward}")
+            print("CALLS FAVORABLE")
+            signal = "QQQ BREAKOUT"
+    
+            if signal != last_signal and trade_grade in ["A+", "A"]:
+                with open("shy_trades.txt", "a") as log:
+                    log.write(f"{datetime.now()}\n")
+                    log.write(f"{signal}\n")
+                    log.write(f"QQQ: {prices['QQQ']}\n")
+                    log.write(f"SPY: {prices['SPY']}\n")
+                    log.write(f"Grade: {trade_grade}\n")
+                    log.write(f"Entry: {entry}\n")
+                    log.write(f"Stop: {stop}\n")
+                    log.write(f"Target: {target_price}\n")
+                    log.write(f"RiskReward: 1:{risk_reward}\n")
+                    log.write("-----------------\n")
+                print("SENDING QQQ CALL ALERT EMAIL NOW")
+                send_email(
+                    "SHY QQQ CALL ALERT",
+                    f"""
+            Ticker: QQQ
+            Signal: {signal}
+            Direction: {trade_direction}
+                    
+            Entry: {entry}
+            Stop: {stop}
+            Target: {target_price}
+            Risk/Reward: 1:{risk_reward}
+                    
+            Market Bias: {market_bias}
+            Setup Score: {setup_score}/5
+            Trade Grade: {trade_grade}
+                    
+            Action: Enter {trade_direction}
+            TSLA: {prices['TSLA']}
+            IONQ: {prices['IONQ']}
+            QBTS: {prices['QBTS']}
+            TQQQ: {prices['TQQQ']}
+            """
+                ) 
+                last_signal = signal
