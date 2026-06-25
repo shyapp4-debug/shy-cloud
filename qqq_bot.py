@@ -172,6 +172,8 @@ while True:
 
         with open("last_alert.txt", "w") as f:
             f.write(current_alert)
+            print("WATCHLIST EMAIL SENT")
+            print("CONTINUING TO SIGNALS...")
 sorted_prices = sorted(
     prices.items(),
     key=lambda x: x[1],
