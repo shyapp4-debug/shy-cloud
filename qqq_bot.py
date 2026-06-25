@@ -172,7 +172,7 @@ while True:
 
         with open("last_alert.txt", "w") as f:
             f.write(current_alert)
-    sorted_prices = sorted(
+sorted_prices = sorted(
     prices.items(),
     key=lambda x: x[1],
     reverse=True
@@ -180,6 +180,7 @@ while True:
 
 for i, (ticker, price) in enumerate(sorted_prices[:5], start=1):
     print(f"#{i} {ticker}: {price}")
+    
 if market_bias == "NEUTRAL / WAIT":
     print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
 
