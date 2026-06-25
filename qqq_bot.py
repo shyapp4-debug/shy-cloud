@@ -206,7 +206,7 @@ if True:
         print("CALLS FAVORABLE")
         signal = "QQQ BREAKOUT"
 
-        if True:
+        if signal != last_signal and trade_grade in ["A+", "A"]:
             with open("shy_trades.txt", "a") as log:
                 log.write(f"{datetime.now()}\n")
                 log.write(f"{signal}\n")
@@ -241,4 +241,4 @@ if True:
                     TQQQ: {prices['TQQQ']}
                     """
             )
-            last_signal = signal
+        last_signal = signal
