@@ -155,7 +155,7 @@ while True:
     except:
         last_alert = ""
 
-    if current_alert != last_alert
+    if current_alert != last_alert:
         send_email(
             "SHY WATCHLIST ALERT",
             f"""
