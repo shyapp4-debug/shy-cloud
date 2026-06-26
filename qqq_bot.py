@@ -192,7 +192,8 @@ while True:
     print("\n----- SHY SIGNALS -----")
     if  (
         market_bias == "STRONG BULLISH"
-        and prices["QQQ"] > 725
+        and prices["QQQ"] > 710
+        and prices["SPY"] > 728
     ):
             print("🚀 QQQ BREAKOUT")
             setup_score = 4
