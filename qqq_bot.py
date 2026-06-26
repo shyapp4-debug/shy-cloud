@@ -190,8 +190,9 @@ while True:
             log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
     
     print("\n----- SHY SIGNALS -----")
-    if market_bias == "STRONG BULLISH":
-        and prices["QQQ] > 725
+    if  (
+        market_bias == "STRONG BULLISH"
+        and prices["QQQ"] > 725
     ):
             print("🚀 QQQ BREAKOUT")
             setup_score = 4
