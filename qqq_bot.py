@@ -61,21 +61,21 @@ while True:
 
     bias_score = 0
 
+    if prices["QQQ"] > prices["SPY"] * 0.96:
+        bias_score += 1
+    else:
+        bias_score -= 1
+
     if prices["QQQ"] > 700:
         bias_score += 1
     else:
         bias_score -= 1
 
-    if prices["SPY"] > 730:
+    if prices["SPY"] > 725:
         bias_score += 1
     else:
         bias_score -= 1
-
-    if prices["SPX"] > 7000:
-        bias_score += 1
-    else:
-        bias_score -= 1
-
+    
     if bias_score == 3:
         market_bias = "STRONG BULLISH"
     elif bias_score == 2:
