@@ -246,3 +246,4 @@ while True:
             """
                 ) 
                 last_signal = signal
+                trade_count += 1
