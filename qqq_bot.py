@@ -248,7 +248,7 @@ while True:
             log.write(f"Target: {target_price}\n")
             log.write(f"RiskReward: 1:{risk_reward}\n")
             log.write("-----------------\n")
-        print("SENDING {best_call} CALL ALERT EMAIL NOW")
+        print(f"SENDING {best_call} CALL ALERT EMAIL NOW")
         send_email(
             f"SHY {best_call} CALL ALERT",
             f"""
