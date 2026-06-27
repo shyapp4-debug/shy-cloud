@@ -272,7 +272,7 @@ while True:
             TQQQ: {prices['TQQQ']}
             """
         ) 
-                last_signal = signal
-                trade_count += 1
-                time.sleep (300)
+        last_signal = signal
+        trade_count += 1
+        time.sleep (300)
                 
