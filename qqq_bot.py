@@ -192,7 +192,7 @@ while True:
     print("\n----- SHY SIGNALS -----")
     if (
         market_bias == "STRONG BEARISH"
-        and prices["QQQ"] < 720
+        and prices[best_call] > 0
     ):
 
         print("🔻 QQQ BREAKDOWN")
