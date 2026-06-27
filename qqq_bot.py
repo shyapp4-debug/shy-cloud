@@ -208,7 +208,7 @@ while True:
         market_bias == "STRONG BULLISH"
         and prices["QQQ"] > 725
         and prices["SPY"] > 728
-
+    ):
             print("🚀 QQQ BREAKOUT")
             setup_score = 5
             trade_grade = "A"
