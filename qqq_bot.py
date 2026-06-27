@@ -204,12 +204,21 @@ while True:
         risk_reward = 2.0
         trade_direction = "PUT"
         signal = "QQQ BREAKDOWN"
-    elf (
+    if (
         market_bias == "STRONG BULLISH"
         and prices["QQQ"] > 725
         and prices["SPY"] > 728
     ):
-            print("🚀 QQQ BREAKOUT")
+        print("🚀 QQQ BREAKOUT")
+        ...
+        signal = "QQQ BREAKOUT"
+
+    elif (
+        market_bias == "STRONG BEARISH"
+        and prices["QQQ"] < 720
+    ):
+        print("🔻 QQQ BREAKDOWN")
+        
             setup_score = 5
             trade_grade = "A"
             entry = prices["QQQ"]
