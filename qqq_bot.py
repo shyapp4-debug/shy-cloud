@@ -236,22 +236,22 @@ while True:
         print("CALLS FAVORABLE")
         signal = f"{best_call} BREAKOUT"
     
-            if signal != last_signal and trade_grade in ["A+", "A"]:
-                with open("shy_trades.txt", "a") as log:
-                    log.write(f"{datetime.now()}\n")
-                    log.write(f"{signal}\n")
-                    log.write(f"{best_call}: {prices[best_call]}\n")
-                    log.write(f"SPY: {prices['SPY']}\n")
-                    log.write(f"Grade: {trade_grade}\n")
-                    log.write(f"Entry: {entry}\n")
-                    log.write(f"Stop: {stop}\n")
-                    log.write(f"Target: {target_price}\n")
-                    log.write(f"RiskReward: 1:{risk_reward}\n")
-                    log.write("-----------------\n")
-                print("SENDING {best_call} CALL ALERT EMAIL NOW")
-                send_email(
-                    f"SHY {best_call} CALL ALERT",
-                    f"""
+    if signal != last_signal and trade_grade in ["A+", "A"]:
+        with open("shy_trades.txt", "a") as log:
+            log.write(f"{datetime.now()}\n")
+            log.write(f"{signal}\n")
+            log.write(f"{best_call}: {prices[best_call]}\n")
+            log.write(f"SPY: {prices['SPY']}\n")
+            log.write(f"Grade: {trade_grade}\n")
+            log.write(f"Entry: {entry}\n")
+            log.write(f"Stop: {stop}\n")
+            log.write(f"Target: {target_price}\n")
+            log.write(f"RiskReward: 1:{risk_reward}\n")
+            log.write("-----------------\n")
+        print("SENDING {best_call} CALL ALERT EMAIL NOW")
+        send_email(
+            f"SHY {best_call} CALL ALERT",
+            f"""
             Ticker: {best_call}
             Signal: {signal}
             Direction: {trade_direction}
@@ -271,8 +271,8 @@ while True:
             QBTS: {prices['QBTS']}
             TQQQ: {prices['TQQQ']}
             """
-                ) 
-                last_signal = signal
-                trade_count += 1
-                time.sleep (300)
+        ) 
+            last_signal = signal
+            trade_count += 1
+            time.sleep (300)
                 
