@@ -190,20 +190,34 @@ while True:
             log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
     
     print("\n----- SHY SIGNALS -----")
-    if  (
+    if (
+        market_bias == "STRONG BEARISH"
+        and prices["QQQ"] < 720
+    ):
+
+        print("🔻 QQQ BREAKDOWN")
+        setup_score = 5
+        trade_grade = "A+"
+        entry = prices["QQQ"]
+        stop = entry + 2
+        target_price = entry - 4
+        risk_reward = 2.0
+        trade_direction = "PUT"
+        signal = "QQQ BREAKDOWN"
+    elf (
         market_bias == "STRONG BULLISH"
-        and prices["QQQ"] > 710
+        and prices["QQQ"] > 725
         and prices["SPY"] > 728
     ):
             print("🚀 QQQ BREAKOUT")
-            setup_score = 4
+            setup_score = 5
             trade_grade = "A"
-            entry = 725
-            stop = 723
-            target_price = 728
-            risk = entry - stop
-            reward = target_price - entry
-            risk_reward = round(reward / risk, 2)
+            entry = prices["QQQ"]
+            stop = entry - 2
+            target_price = entry + 4
+            risk_reward = 2.0
+            trade_direction = "CALL"
+            signal = "QQQ BREAKOUT"
             print(f"Setup Score: {setup_score}/5")
             print(f"Trade Grade: {trade_grade}")
             print(f"Entry: {entry}")        
