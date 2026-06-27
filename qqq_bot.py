@@ -219,22 +219,22 @@ while True:
     ):
         print("🔻 QQQ BREAKDOWN")
         
-            setup_score = 5
-            trade_grade = "A"
-            entry = prices["QQQ"]
-            stop = entry - 2
-            target_price = entry + 4
-            risk_reward = 2.0
-            trade_direction = "CALL"
-            signal = "QQQ BREAKOUT"
-            print(f"Setup Score: {setup_score}/5")
-            print(f"Trade Grade: {trade_grade}")
-            print(f"Entry: {entry}")        
-            print(f"Stop: {stop}")
-            print(f"Target: {target_price}")
-            print(f"Risk/Reward: 1:{risk_reward}")
-            print("CALLS FAVORABLE")
-            signal = f"{best_call} BREAKOUT"
+        setup_score = 5
+        trade_grade = "A"
+        entry = prices["QQQ"]
+        stop = entry - 2
+        target_price = entry + 4
+        risk_reward = 2.0
+        trade_direction = "CALL"
+        signal = "QQQ BREAKOUT"
+        print(f"Setup Score: {setup_score}/5")
+        print(f"Trade Grade: {trade_grade}")
+        print(f"Entry: {entry}")        
+        print(f"Stop: {stop}")
+        print(f"Target: {target_price}")
+        print(f"Risk/Reward: 1:{risk_reward}")
+        print("CALLS FAVORABLE")
+        signal = f"{best_call} BREAKOUT"
     
             if signal != last_signal and trade_grade in ["A+", "A"]:
                 with open("shy_trades.txt", "a") as log:
