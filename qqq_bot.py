@@ -117,6 +117,22 @@ while True:
 
     print(f"Setup Score: {setup_score}/5")
     print(f"Trade Grade: {trade_grade}")
+    confidence = 0
+
+    if market_bias == "STRONG BULLISH":
+        confidence += 25
+
+    if setup_score == 5:
+        confidence += 25
+
+    if trade_grade == "A+":
+        confidence += 25
+
+    if trade_direction != "WAIT":
+        confidence += 25
+
+    print(f"Confidence: {confidence}%")
+
     print("\n----- SHY WATCHLIST SCANNER -----")
 
     top_ticker = None
