@@ -210,19 +210,19 @@ while True:
         print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
     
         with open("shy_trades.txt", "a") as log:
-            log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices['QQQ']} | SPY: {prices['SPY']}\n")
+            log.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices.get(["QQQ", 0)} | SPY: {prices.get("SPY", 0]}\n")
     
     print("\n----- SHY SIGNALS -----")
     if (
         market_bias == "STRONG BEARISH"
         and best_put is not None
-        and prices.get(best_call, 0) > 0
+        and prices.get(best_put, 0) > 0
     ):
 
         print("🔻 QQQ BREAKDOWN")
         setup_score = 5
         trade_grade = "A+"
-        entry = prices["QQQ"]
+        entry = prices.get("QQQ", 0)
         stop = entry + 2
         target_price = entry - 4
         risk_reward = 2.0
@@ -230,7 +230,7 @@ while True:
         signal = "QQQ BREAKDOWN"
     if (
         market_bias == "STRONG BULLISH"
-        and prices["QQQ"] > 725
+        and prices.get["QQQ", 0) > 725
         and prices["SPY"] > 728
     ):
         print("🚀 QQQ BREAKOUT")
