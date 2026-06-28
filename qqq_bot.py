@@ -66,17 +66,17 @@ while True:
 
     bias_score = 0
 
-    if prices["QQQ"] > prices["SPY"] * 0.96:
+    if prices.get("QQQ", 0) > prices.get("SPY", 0) * 0.96:
         bias_score += 1
     else:
         bias_score -= 1
 
-    if prices["QQQ"] > 700:
+    if prices.get("QQQ", 0) > 700:
         bias_score += 1
     else:
         bias_score -= 1
 
-    if prices["SPY"] > 725:
+    if prices.get("SPY", 0) > 725:
         bias_score += 1
     else:
         bias_score -= 1
