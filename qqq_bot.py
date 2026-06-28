@@ -215,7 +215,7 @@ while True:
     print("\n----- SHY SIGNALS -----")
     if (
         market_bias == "STRONG BEARISH"
-        and best_call is not None
+        and best_put is not None
         and prices.get(best_call, 0) > 0
     ):
 
@@ -239,13 +239,13 @@ while True:
 
     elif (
         market_bias == "STRONG BEARISH"
-        and prices["QQQ"] < 720
+        and prices.get("QQQ", 0) < 720
     ):
         print("🔻 QQQ BREAKDOWN")
         
         setup_score = 5
         trade_grade = "A"
-        entry = prices["QQQ"]
+        entry = prices("QQQ", 0)
         stop = entry - 2
         target_price = entry + 4
         risk_reward = 2.0
