@@ -291,10 +291,10 @@ while True:
             Confidence: {confidence}%
                     
             Action: Enter {trade_direction}
-            TSLA: {prices['TSLA']}
-            IONQ: {prices['IONQ']}
-            QBTS: {prices['QBTS']}
-            TQQQ: {prices['TQQQ']}
+            TSLA: {prices.get('TSLA', 0)}
+            IONQ: {prices.get('IONQ', 0)}
+            QBTS: {prices.get('QBTS', 0)}
+            TQQQ: {prices.get('TQQQ', 0)}
             """
         ) 
         last_signal = signal
