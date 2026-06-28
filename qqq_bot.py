@@ -48,7 +48,7 @@ while True:
         try:
             ticker = yf.Ticker(symbol)
             price = ticker.fast_info["last_price"]
-            display_symbol = ...
+            display_symbol = "SPX" if symbol == "^GSPC" else "BRK.B" if symbol == "BRK-B" else symbol
             prices[display_symbol] = round(price, 2)
             hist = ticker.history(period="5d", interval="5m")
             ema20[display_symbol] = round(hist["Close"].ewm(span=20).mean().iloc[-1], 2)
