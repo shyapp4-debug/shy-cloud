@@ -41,6 +41,7 @@ while True:
     with open("watchlist.txt", "r") as f:
         symbols = [line.strip() for line in f if line.strip()]
     prices = {}
+    ema = {}
 
     for symbol in symbols:
         try:
@@ -132,7 +133,9 @@ while True:
         confidence += 25
 
     print(f"Confidence: {confidence}%")
-
+    print(f"Market Bias Score: {market_bias_score}")
+    print(f" Market Bias: {market_bias")
+    
     print("\n----- SHY WATCHLIST SCANNER -----")
 
     top_ticker = None
