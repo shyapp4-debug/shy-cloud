@@ -230,7 +230,7 @@ while True:
         signal = "QQQ BREAKDOWN"
     if (
         market_bias == "STRONG BULLISH"
-        and prices.get["QQQ", 0) > 725
+        and prices.get("QQQ", 0) > 725
         and prices["SPY"] > 728
     ):
         print("🚀 QQQ BREAKOUT")
