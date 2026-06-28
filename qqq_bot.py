@@ -215,7 +215,8 @@ while True:
     print("\n----- SHY SIGNALS -----")
     if (
         market_bias == "STRONG BEARISH"
-        and prices[best_call] > 0
+        and best_call is not None
+        and prices.get(best_call, 0) > 0
     ):
 
         print("🔻 QQQ BREAKDOWN")
