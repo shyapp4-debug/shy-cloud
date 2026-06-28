@@ -280,6 +280,7 @@ while True:
             Market Bias: {market_bias}
             Setup Score: {setup_score}/5
             Trade Grade: {trade_grade}
+            Confidence: {confidence}%
                     
             Action: Enter {trade_direction}
             TSLA: {prices['TSLA']}
