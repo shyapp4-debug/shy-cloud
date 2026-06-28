@@ -276,6 +276,9 @@ while True:
             log.write(f"Target: {target_price}\n")
             log.write(f"RiskReward: 1:{risk_reward}\n")
             log.write("-----------------\n")
+    if best_call is None:
+        print("NO VALID CALL CANDIDATE - SKIPPING CALL EMAIL")
+        continue
         print(f"SENDING {best_call} CALL ALERT EMAIL NOW")
         send_email(
             f"SHY {best_call} CALL ALERT",
