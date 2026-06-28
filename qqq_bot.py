@@ -264,7 +264,7 @@ while True:
         with open("shy_trades.txt", "a") as log:
             log.write(f"{datetime.now()}\n")
             log.write(f"{signal}\n")
-            log.write(f"{best_call}: {prices[best_call]}\n")
+            log.write(f"{best_call}: {prices.get(best_call, 0)}\n")
             log.write(f"SPY: {prices['SPY']}\n")
             log.write(f"Grade: {trade_grade}\n")
             log.write(f"Entry: {entry}\n")
