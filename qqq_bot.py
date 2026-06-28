@@ -245,7 +245,7 @@ while True:
         
         setup_score = 5
         trade_grade = "A"
-        entry = prices("QQQ", 0)
+        entry = prices.get("QQQ", 0)
         stop = entry - 2
         target_price = entry + 4
         risk_reward = 2.0
