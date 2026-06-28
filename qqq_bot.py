@@ -235,6 +235,10 @@ while True:
     ):
         print("🚀 QQQ BREAKOUT")
         ...
+        signal =("QQQ BREAKOUT")
+        if best_call is None:
+            print("NO VALID CALL CANDIDATE - SKIPPED CALL EMAIL")
+            continue
         signal = "QQQ BREAKOUT"
 
     elif (
