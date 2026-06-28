@@ -41,14 +41,18 @@ while True:
     with open("watchlist.txt", "r") as f:
         symbols = [line.strip() for line in f if line.strip()]
     prices = {}
-    ema = {}
+    ema20 = {}
+    ema50 = {}
 
     for symbol in symbols:
         try:
             ticker = yf.Ticker(symbol)
             price = ticker.fast_info["last_price"]
-            display_symbol = "SPX" if symbol == "^GSPC" else "BRK.B" if symbol == "BRK-B" else symbol
+            display_symbol = ...
             prices[display_symbol] = round(price, 2)
+            hist = ticker.history(period="5d", interval="5m")
+            ema20[display_symbol] = round(hist["Close"].ewm(span=20).mean().iloc[-1], 2)
+            ema50[display_symbol] = round(hist["Close"].ewm(span=50).mean().iloc[-1], 2)
             time.sleep(5)
         except Exception as e:
             display_symbol = "SPX" if symbol == "^GSPC" else "BRK.B" if symbol == "BRK-B" else symbol
