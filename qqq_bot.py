@@ -265,7 +265,7 @@ while True:
             log.write(f"{datetime.now()}\n")
             log.write(f"{signal}\n")
             log.write(f"{best_call}: {prices.get(best_call, 0)}\n")
-            og.write(f"SPY: {prices.get('SPY', 0)}\n")
+            log.write(f"SPY: {prices.get('SPY', 0)}\n")
             log.write(f"Grade: {trade_grade}\n")
             log.write(f"Entry: {entry}\n")
             log.write(f"Stop: {stop}\n")
