@@ -134,7 +134,7 @@ while True:
 
     print(f"Confidence: {confidence}%")
     print(f"Market Bias Score: {market_bias_score}")
-    print(f" Market Bias: {market_bias")
+    print(f" Market Bias: {market_bias"}
     
     print("\n----- SHY WATCHLIST SCANNER -----")
 
