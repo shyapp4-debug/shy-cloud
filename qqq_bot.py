@@ -57,12 +57,12 @@ while True:
         except Exception as e:
             display_symbol = "SPX" if symbol == "^GSPC" else "BRK.B" if symbol == "BRK-B" else symbol
             prices[display_symbol] = 0
-    print(f"{display_symbol}: unavailable")
+    print(f"SHY{display_symbol}: unavailable")
 
     print("\n----- SHY MARKET DASHBOARD -----")
 
     for ticker, price in prices.items():
-        print(f"{ticker}: {price}")
+        print(f"SHY{ticker}: {price}")
 
     bias_score = 0
 
@@ -92,7 +92,7 @@ while True:
     else:
         market_bias = "NEUTRAL / WAIT"
 
-    print(f"Market Bias Score: {bias_score}")
+    print(f"SHYMarket Bias Score: {bias_score}")
     print("Market Bias:", market_bias)
 
     setup_score = 0
@@ -120,8 +120,8 @@ while True:
         trade_grade = "NO TRADE"
         trade_direction = "WAIT"
 
-    print(f"Setup Score: {setup_score}/5")
-    print(f"Trade Grade: {trade_grade}")
+    print(f"SHYSetup Score: {setup_score}/5")
+    print(f"SHYTrade Grade: {trade_grade}")
     confidence = 0
 
     if market_bias == "STRONG BULLISH":
@@ -136,9 +136,9 @@ while True:
     if trade_direction != "WAIT":
         confidence += 25
 
-    print(f"Confidence: {confidence}%")
-    print(f"Market Bias Score: {bias_score}")
-    print(f"Market Bias: {market_bias}")
+    print(f"SHYConfidence: {confidence}%")
+    print(f"SHYMarket Bias Score: {bias_score}")
+    print(f"SHYMarket Bias: {market_bias}")
     
     print("\n----- SHY WATCHLIST SCANNER -----")
 
@@ -151,9 +151,9 @@ while True:
                 top_price = prices[symbol]
                 top_ticker = symbol
 
-    print(f"Top Ticker: {top_ticker}")
-    print(f"Top Price: {top_price}")
-    print(f"Trade Direction: {trade_direction}")
+    print(f"SHYTop Ticker: {top_ticker}")
+    print(f"SHYTop Price: {top_price}")
+    print(f"SHYTrade Direction: {trade_direction}")
     print("\n----- SHY LEADERBOARD -----")
     
     best_call = None
@@ -168,9 +168,9 @@ while True:
             if best_put is None or prices[symbol] < prices.get(best_put, 999999):
                 best_put = symbol
 
-    print(f"Best Call Candidate: {best_call}")
-    print(f"Best Put Candidate: {best_put}")
-    current_alert = f"{best_call}-{best_put}-{market_bias}-{trade_grade}"
+    print(f"SHYBest Call Candidate: {best_call}")
+    print(f"SHYBest Put Candidate: {best_put}")
+    current_alert = f"SHY{best_call}-{best_put}-{market_bias}-{trade_grade}"
 
     try:
         with open("last_alert.txt", "r") as f:
@@ -181,7 +181,7 @@ while True:
     if current_alert != last_alert:
         send_email(
             "SHY WATCHLIST ALERT",
-            f"""
+            f"SHY""
     Best Call Candidate: {best_call}
 
     Best Put Candidate: {best_put}
@@ -204,13 +204,13 @@ while True:
     )
     
     for i, (ticker, price) in enumerate(sorted_prices[:5], start=1):
-        print(f"#{i} {ticker}: {price}")
+        print(f"SHY#{i} {ticker}: {price}")
         
     if market_bias == "NEUTRAL / WAIT":
         print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
     
         with open("shy_trades.txt", "a") as log:
-            og.write(f"{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices.get('QQQ', 0)} | SPY: {prices.get('SPY', 0)}\n")
+            og.write(f"SHY{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices.get('QQQ', 0)} | SPY: {prices.get('SPY', 0)}\n")
     
     print("\n----- SHY SIGNALS -----")
     if (
@@ -255,33 +255,33 @@ while True:
         risk_reward = 2.0
         trade_direction = "CALL"
         signal = "QQQ BREAKOUT"
-        print(f"Setup Score: {setup_score}/5")
-        print(f"Trade Grade: {trade_grade}")
-        print(f"Entry: {entry}")        
-        print(f"Stop: {stop}")
-        print(f"Target: {target_price}")
-        print(f"Risk/Reward: 1:{risk_reward}")
+        print(f"SHYSetup Score: {setup_score}/5")
+        print(f"SHYTrade Grade: {trade_grade}")
+        print(f"SHYEntry: {entry}")        
+        print(f"SHYStop: {stop}")
+        print(f"SHYTarget: {target_price}")
+        print(f"SHYRisk/Reward: 1:{risk_reward}")
         print("CALLS FAVORABLE")
-        signal = f"{best_call} BREAKOUT"
+        signal = f"SHY{best_call} BREAKOUT"
     
     if signal != last_signal and trade_grade in ["A+", "A"]:
         with open("shy_trades.txt", "a") as log:
-            log.write(f"{datetime.now()}\n")
-            log.write(f"{signal}\n")
-            log.write(f"{best_call}: {prices.get(best_call, 0)}\n")
-            log.write(f"SPY: {prices.get('SPY', 0)}\n")
-            log.write(f"Grade: {trade_grade}\n")
-            log.write(f"Entry: {entry}\n")
-            log.write(f"Stop: {stop}\n")
-            log.write(f"Target: {target_price}\n")
-            log.write(f"RiskReward: 1:{risk_reward}\n")
+            log.write(f"SHY{datetime.now()}\n")
+            log.write(f"SHY{signal}\n")
+            log.write(f"SHY{best_call}: {prices.get(best_call, 0)}\n")
+            log.write(f"SHYSPY: {prices.get('SPY', 0)}\n")
+            log.write(f"SHYGrade: {trade_grade}\n")
+            log.write(f"SHYEntry: {entry}\n")
+            log.write(f"SHYStop: {stop}\n")
+            log.write(f"SHYTarget: {target_price}\n")
+            log.write(f"SHYRiskReward: 1:{risk_reward}\n")
             log.write("-----------------\n")
     if top_ticker is None:
         print("NO VALID CALL CANDIDATE - SKIPPING CALL EMAIL")
         continue
-        print(f"SENDING {top_ticker} CALL ALERT EMAIL NOW")
+        print(f"SHYSENDING {top_ticker} CALL ALERT EMAIL NOW")
         send_email(
-            f"SHY {top_ticker} CALL ALERT",
+            f"SHYSHY {top_ticker} CALL ALERT",
             f"""
             Ticker: {top_ticker}
             Signal: {signal}
