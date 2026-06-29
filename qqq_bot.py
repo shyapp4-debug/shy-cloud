@@ -212,11 +212,6 @@ while True:
             og.write(f"SHY{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices.get('QQQ', 0)} | SPY: {prices.get('SPY', 0)}\n")
     
     print("\n----- SHY SIGNALS -----")
-    send_email(
-        "SHY TEST EMAIL",
-        "SHY Cloud is running and email is working."
-    )
-    print("TEST EMAIL SENT")
     
     if (
         market_bias == "STRONG BEARISH"
