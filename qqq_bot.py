@@ -181,7 +181,7 @@ while True:
     if current_alert != last_alert:
         send_email(
             "SHY WATCHLIST ALERT",
-            f"SHY""
+            f"SHY {top_ticker} CALL ALERT",
     Best Call Candidate: {best_call}
 
     Best Put Candidate: {best_put}
