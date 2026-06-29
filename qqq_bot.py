@@ -230,7 +230,7 @@ while True:
     if (
         market_bias == "STRONG BULLISH"
         and prices.get("QQQ", 0) > 725
-        and prices("SPY", 0) > 728
+        and prices.get("SPY", 0) > 728
     ):
         print("🚀 QQQ BREAKOUT")
         ...
@@ -281,7 +281,7 @@ while True:
         print(f"SENDING {top_ticker} CALL ALERT EMAIL NOW")
         send_email(
             f"SHY {top_ticker} CALL ALERT",
-            f'''
+            f"""
         Ticker: {top_ticker}
         Signal: {signal}
         Direction: {trade_direction}
@@ -297,11 +297,12 @@ while True:
         Confidence: {confidence}%
         
         Action: Enter {trade_direction}
+        
         TSLA: {prices.get('TSLA', 0)}
         IONQ: {prices.get('IONQ', 0)}
         QBTS: {prices.get('QBTS', 0)}
         TQQQ: {prices.get('TQQQ', 0)}
-        '''
+        """
         )
         last_signal = signal
         trade_count += 1
