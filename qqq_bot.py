@@ -303,7 +303,7 @@ while True:
             QBTS: {prices.get('QBTS', 0)}
             TQQQ: {prices.get('TQQQ', 0)}
             """
-        ) 
+            )     
         last_signal = signal
         trade_count += 1
         time.sleep (300)
