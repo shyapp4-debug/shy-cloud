@@ -281,29 +281,29 @@ while True:
         continue
         print(f"SHYSENDING {top_ticker} CALL ALERT EMAIL NOW")
         send_email(
-            f"SHYSHY {top_ticker} CALL ALERT",
+            f"SHY {top_ticker} CALL ALERT",
             f"""
-            Ticker: {top_ticker}
-            Signal: {signal}
-            Direction: {trade_direction}
-                    
-            Entry: {entry}
-            Stop: {stop}
-            Target: {target_price}
-            Risk/Reward: 1:{risk_reward}
-                    
-            Market Bias: {market_bias}
-            Setup Score: {setup_score}/5
-            Trade Grade: {trade_grade}
-            Confidence: {confidence}%
-                    
-            Action: Enter {trade_direction}
-            TSLA: {prices.get('TSLA', 0)}
-            IONQ: {prices.get('IONQ', 0)}
-            QBTS: {prices.get('QBTS', 0)}
-            TQQQ: {prices.get('TQQQ', 0)}
-            """
-            )     
+        Ticker: {top_ticker}
+        Signal: {signal}
+        Direction: {trade_direction}
+        
+        Entry: {entry}
+        Stop: {stop}
+        Target: {target_price}
+        Risk/Reward: 1:{risk_reward}
+        
+        Market Bias: {market_bias}
+        Setup Score: {setup_score}/5
+        Trade Grade: {trade_grade}
+        Confidence: {confidence}%
+        
+        Action: Enter {trade_direction}
+        TSLA: {prices.get('TSLA', 0)}
+        IONQ: {prices.get('IONQ', 0)}
+        QBTS: {prices.get('QBTS', 0)}
+        TQQQ: {prices.get('TQQQ', 0)}
+        """
+        )
         last_signal = signal
         trade_count += 1
         time.sleep (300)
