@@ -181,9 +181,8 @@ while True:
     if current_alert != last_alert:
         send_email(
             "SHY WATCHLIST ALERT",
-            f"SHY {top_ticker} CALL ALERT",
+            f"""
     Best Call Candidate: {best_call}
-
     Best Put Candidate: {best_put}
 
     Market Bias: {market_bias}
@@ -191,7 +190,7 @@ while True:
 
     Action: WATCH
     """
-        )
+    )
 
         with open("last_alert.txt", "w") as f:
             f.write(current_alert)
