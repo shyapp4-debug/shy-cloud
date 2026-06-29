@@ -265,6 +265,7 @@ while True:
         signal = f"SHY{best_call} BREAKOUT"
     
     if signal != last_signal and trade_grade in ["A+", "A"]:
+        top_ticker = best_call if trade_direction == "CALL" else best_put
         with open("shy_trades.txt", "a") as log:
             log.write(f"SHY{datetime.now()}\n")
             log.write(f"SHY{signal}\n")
