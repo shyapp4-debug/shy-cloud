@@ -279,7 +279,7 @@ while True:
     if top_ticker is None:
         print("NO VALID CALL CANDIDATE - SKIPPING CALL EMAIL")
         continue
-        print(f"SHYSENDING {top_ticker} CALL ALERT EMAIL NOW")
+        print(f"SENDING {top_ticker} CALL ALERT EMAIL NOW")
         send_email(
             f"SHY {top_ticker} CALL ALERT",
             f"""
