@@ -266,6 +266,7 @@ while True:
     
     if trade_grade in ["A+", "A"]:
         print("ALERT BLOCK ENTERED")
+        print("ABOUT TO SEND EMAIL")
         top_ticker = best_call if trade_direction == "CALL" else best_put
         with open("shy_trades.txt", "a") as log:
             log.write(f"SHY{datetime.now()}\n")
@@ -283,6 +284,7 @@ while True:
         continue
         print(f"SENDING {top_ticker} CALL ALERT EMAIL NOW")
         send_email(
+        print("    EMAIL SENT SUCCESSFULLY")
             f"SHY {top_ticker} CALL ALERT",
             f"""
         Ticker: {top_ticker}
