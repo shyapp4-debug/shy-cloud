@@ -284,12 +284,15 @@ while True:
         continue
         print(f"SENDING {top_ticker} CALL ALERT EMAIL NOW")
         send_email(
-        print("    EMAIL SENT SUCCESSFULLY")
             f"SHY {top_ticker} CALL ALERT",
             f"""
         Ticker: {top_ticker}
         Signal: {signal}
         Direction: {trade_direction}
+        """
+        )
+
+    print("EMAIL SENT SUCCESSFULLY")
         
         Entry: {entry}
         Stop: {stop}
