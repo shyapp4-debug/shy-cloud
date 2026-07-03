@@ -289,10 +289,6 @@ while True:
         Ticker: {top_ticker}
         Signal: {signal}
         Direction: {trade_direction}
-        """
-        )
-
-    print("EMAIL SENT SUCCESSFULLY")
         
         Entry: {entry}
         Stop: {stop}
@@ -312,6 +308,9 @@ while True:
         TQQQ: {prices.get('TQQQ', 0)}
         """
         )
+
+        print("EMAIL SENT SUCCESSFULLY")
+        
         last_signal = signal
         trade_count += 1
         time.sleep (300)
