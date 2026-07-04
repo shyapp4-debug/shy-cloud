@@ -209,7 +209,7 @@ while True:
         print("NO TRADE - MARKET BIAS NOT STRONG ENOUGH")
     
         with open("shy_trades.txt", "a") as log:
-            og.write(f"SHY{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices.get('QQQ', 0)} | SPY: {prices.get('SPY', 0)}\n")
+            log.write(f"SHY{datetime.now()} | {market_bias} | Score: {bias_score} | QQQ: {prices.get('QQQ', 0)} | SPY: {prices.get('SPY', 0)}\n")
     
     print("\n----- SHY SIGNALS -----")
     
