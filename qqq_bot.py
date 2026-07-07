@@ -5,6 +5,13 @@ from email.mime.text import MIMEText
 from datetime import datetime
 EMAIL_ADDRESS = "shyapp4@gmail.com"
 EMAIL_PASSWORD = "vtbv mnpj jzgg ctqy"
+TEST_MODE = True
+if TEST_MODE: 
+print("🧪 TEST MODE ENABLED")
+market_bias = "STRONG BULLISH"
+trade_grade = "A+"
+setup_score = 5
+confidence = 100
 SEND_TO = "cecilshy8@yahoo.com"
 def send_email(subject, body):
     msg = MIMEText(body)
@@ -253,7 +260,7 @@ while True:
         stop = entry - 2
         target_price = entry + 4
         risk_reward = 2.0
-        trade_direction = "CALL"
+        trade_direction = "Put"
         signal = "QQQ BREAKOUT"
         print(f"SHYSetup Score: {setup_score}/5")
         print(f"SHYTrade Grade: {trade_grade}")
@@ -279,11 +286,13 @@ while True:
             log.write(f"SHYTarget: {target_price}\n")
             log.write(f"SHYRiskReward: 1:{risk_reward}\n")
             log.write("-----------------\n")
-    if top_ticker is None:
-        print("NO VALID CALL CANDIDATE - SKIPPING CALL EMAIL")
-        continue
-        print(f"SENDING {top_ticker} CALL ALERT EMAIL NOW")
-        send_email(
+        
+        if top_ticker is None:
+           `print("NO VALID CALL CANDIDATE - SKIPPING CALL EMAIL")
+        else:
+            print(f"SENDING {top_ticker} CALL ALERT EMAIL NOW")
+
+            send_email(
             f"SHY {top_ticker} CALL ALERT",
             f"""
         Ticker: {top_ticker}
@@ -313,5 +322,5 @@ while True:
         
         last_signal = signal
         trade_count += 1
-        time.sleep (300)
+        time.sleep(300)
                 
