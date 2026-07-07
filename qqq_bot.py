@@ -7,11 +7,11 @@ EMAIL_ADDRESS = "shyapp4@gmail.com"
 EMAIL_PASSWORD = "vtbv mnpj jzgg ctqy"
 TEST_MODE = True
 if TEST_MODE: 
-print("🧪 TEST MODE ENABLED")
-market_bias = "STRONG BULLISH"
-trade_grade = "A+"
-setup_score = 5
-confidence = 100
+    print("🧪 TEST MODE ENABLED")
+    market_bias = "STRONG BULLISH"
+    trade_grade = "A+"
+    setup_score = 5
+    confidence = 100
 SEND_TO = "cecilshy8@yahoo.com"
 def send_email(subject, body):
     msg = MIMEText(body)
