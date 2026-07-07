@@ -3,6 +3,12 @@ import time
 import smtplib
 from email.mime.text import MIMEText
 from datetime import datetime
+
+from market import get_market_bias
+from scanner import load_watchlist, scan_watchlist
+from signals import get_signal
+from emailer import send_email
+from dashboard import show_dashboard
 EMAIL_ADDRESS = "shyapp4@gmail.com"
 EMAIL_PASSWORD = "vtbv mnpj jzgg ctqy"
 TEST_MODE = False
