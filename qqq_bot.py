@@ -288,13 +288,13 @@ while True:
             log.write("-----------------\n")
         
         if top_ticker is None:
-           `print("NO VALID CALL CANDIDATE - SKIPPING CALL EMAIL")
+            print("NO VALID CALL CANDIDATE - SKIPPING CALL EMAIL")
         else:
             print(f"SENDING {top_ticker} CALL ALERT EMAIL NOW")
 
             send_email(
-            f"SHY {top_ticker} CALL ALERT",
-            f"""
+                f"SHY {top_ticker} CALL ALERT",
+                f"""
         Ticker: {top_ticker}
         Signal: {signal}
         Direction: {trade_direction}
