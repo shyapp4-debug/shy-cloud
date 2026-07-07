@@ -1,0 +1,35 @@
+def show_dashboard(
+prices,
+market_bias,
+bias_score,
+confidence,
+trade_grade,
+setup_score,
+trade_direction,
+top_ticker,
+top_price,
+best_call,
+best_put,
+):
+print("\n========== SHY MARKET DASHBOARD ==========")
+
+print(f"Market Bias: {market_bias}")
+print(f"Bias Score: {bias_score}")
+print(f"Confidence: {confidence}%")
+print(f"Trade Grade: {trade_grade}")
+print(f"Setup Score: {setup_score}/5")
+print(f"Trade Direction: {trade_direction}")
+
+print("\n----- WATCHLIST -----")
+for ticker, price in prices.items():
+print(f"{ticker}: {price}")
+
+print("\n----- SCANNER -----")
+print(f"Top Ticker: {top_ticker}")
+print(f"Top Price: {top_price}")
+
+print("\n----- LEADERBOARD -----")
+print(f"Best CALL: {best_call}")
+print(f"Best PUT : {best_put}")
+
+print("\n=========================================\n")
