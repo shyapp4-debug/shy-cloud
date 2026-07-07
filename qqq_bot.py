@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 from datetime import datetime
 EMAIL_ADDRESS = "shyapp4@gmail.com"
 EMAIL_PASSWORD = "vtbv mnpj jzgg ctqy"
-TEST_MODE = True
+TEST_MODE = False
 if TEST_MODE: 
     print("🧪 TEST MODE ENABLED")
     market_bias = "STRONG BULLISH"
