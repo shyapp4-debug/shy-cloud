@@ -1,3 +1,4 @@
+from emailer import send_email
 import yfinance as yf
 import time
 import smtplib
@@ -297,7 +298,8 @@ while True:
             print("NO VALID CALL CANDIDATE - SKIPPING CALL EMAIL")
         else:
             print(f"SENDING {top_ticker} CALL ALERT EMAIL NOW")
-
+       
+        if signal != "NO TRADE":
             send_email(
                 f"SHY {top_ticker} CALL ALERT",
                 f"""
