@@ -6,16 +6,13 @@ def show_dashboard(prices, market_bias, bias_score, confidence, trade_grade, set
     print(f"Trade Grade: {trade_grade}")
     print(f"Setup Score: {setup_score}/5")
     print(f"Trade Direction: {trade_direction}")
-
-  print("\n----- WATCHLIST -----")
-  for ticker, price in prices.items():
-      print(f"{ticker}: {price}")
-
-  print("\n----- SCANNER -----")
-  print(f"Top Ticker: {top_ticker}")
-  print(f"Top Price: {top_price}")
-  
-  print("\n----- LEADERBOARD -----")
-  print(f"Best CALL: {best_call}")
-  print(f"Best PUT : {best_put}")
-  print("\n=========================================\n")
+    print("\n----- WATCHLIST -----")
+    for ticker, price in prices.items():
+        print(f"{ticker}: {price}")
+    print("\n----- SCANNER -----")
+    print(f"Top Ticker: {top_ticker}")
+    print(f"Top Price: {top_price}")
+    print("\n----- LEADERBOARD -----")
+    print(f"Best CALL: {best_call}")
+    print(f"Best PUT : {best_put}")
+    print("\n=========================================\n")
