@@ -307,10 +307,10 @@ while True:
             trade_grade,
             setup_score,
             trade_direction,
-                top_ticker,
-                top_price,
-                best_call,
-                best_put
+            top_ticker,
+            top_price,
+            best_call,
+            best_put
         )
         if signal != "NO TRADE":
             send_email(
