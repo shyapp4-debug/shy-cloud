@@ -306,7 +306,7 @@ while True:
                 confidence,
                 trade_grade,
                 setup_score,
-                trade_dirfection,
+                trade_direction,
                 top_ticker,
                 top_price,
                 best_call,
