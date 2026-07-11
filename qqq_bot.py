@@ -323,38 +323,38 @@ while True:
         
         current_alert = f"{top_ticker}_{signal}"
 
-            if signal != "NO TRADE" and current_alert != last_alert:
-    send_email(
-        f"SHY {top_ticker} CALL ALERT",
-        f"""
-        Ticker: {top_ticker}
-        Signal: {signal}
-        Direction: {trade_direction}
+        if signal != "NO TRADE" and current_alert != last_alert:
+            send_email(
+                f"SHY {top_ticker} CALL ALERT",
+                f"""
+                Ticker: {top_ticker}
+                Signal: {signal}
+                Direction: {trade_direction}
         
-        Entry: {entry}
-        Stop: {stop}
-        Target: {target_price}
-        Risk/Reward: 1:{risk_reward}
+                Entry: {entry}
+                Stop: {stop}
+                Target: {target_price}
+                Risk/Reward: 1:{risk_reward}
         
-        Market Bias: {market_bias}
-        Setup Score: {setup_score}/5
-        Trade Grade: {trade_grade}
-        Confidence: {confidence}%
+                Market Bias: {market_bias}
+                Setup Score: {setup_score}/5
+                Trade Grade: {trade_grade}
+                Confidence: {confidence}%
         
-        Action: Enter {trade_direction}
+                Action: Enter {trade_direction}
         
-        TSLA: {prices.get('TSLA', 0)}
-        IONQ: {prices.get('IONQ', 0)}
-        QBTS: {prices.get('QBTS', 0)}
-        TQQQ: {prices.get('TQQQ', 0)}
-        """
-    )
+                TSLA: {prices.get('TSLA', 0)}
+                IONQ: {prices.get('IONQ', 0)}
+                QBTS: {prices.get('QBTS', 0)}
+                TQQQ: {prices.get('TQQQ', 0)}
+                """
+            )
 
-    with open(LAST_ALERT_FILE, "w") as f:
-        f.write(current_alert)
-        print("EMAIL SENT SUCCESSFULLY")
+            with open(LAST_ALERT_FILE, "w") as f:
+                f.write(current_alert)
+            print("EMAIL SENT SUCCESSFULLY")
         
-last_signal = signal
+        last_signal = signal
         
         trade_count += 1
         time.sleep(300)
