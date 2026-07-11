@@ -1,5 +1,6 @@
 from emailer import send_email
 import yfinance as yf
+import os
 import time
 import smtplib
 from email.mime.text import MIMEText
@@ -312,11 +313,20 @@ while True:
                 best_call,
                 best_put,
             )
-                
-            if signal != "NO TRADE":
-                send_email(
-                    f"SHY {top_ticker} CALL ALERT",
-                    f"""
+
+        LAST_ALERT_FILE = "last_alert.txt"
+
+        last_alert = ""
+        if os.path.exists(LAST_ALERT_FILE):
+            with open(LAST_ALERT_FILE, "r") as f:
+                last_alert = f.read().strip()
+        
+        current_alert = f"{top_ticker}_{signal}"
+
+            if signal != "NO TRADE" and current_alert != last_alert:
+    send_email(
+        f"SHY {top_ticker} CALL ALERT",
+        f"""
         Ticker: {top_ticker}
         Signal: {signal}
         Direction: {trade_direction}
@@ -338,11 +348,14 @@ while True:
         QBTS: {prices.get('QBTS', 0)}
         TQQQ: {prices.get('TQQQ', 0)}
         """
-        )
+    )
 
+    with open(LAST_ALERT_FILE, "w") as f:
+        f.write(current_alert)
         print("EMAIL SENT SUCCESSFULLY")
         
-        last_signal = signal
+last_signal = signal
+        
         trade_count += 1
         time.sleep(300)
                 
