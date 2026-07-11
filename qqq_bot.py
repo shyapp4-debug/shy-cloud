@@ -188,7 +188,7 @@ while True:
     current_alert = f"SHY{best_call}-{best_put}-{market_bias}-{trade_grade}"
 
     try:
-        with open("last_alert.txt", "r") as f:
+        with open("last_watchlist_alert.txt", "r") as f:
             last_alert = f.read().strip()
     except:
         last_alert = ""
@@ -207,7 +207,7 @@ while True:
     """
     )
 
-        with open("last_alert.txt", "w") as f:
+        with open("last_watchlist_alert.txt", "w") as f:
             f.write(current_alert)
             print("WATCHLIST EMAIL SENT")
             print("CONTINUING TO SIGNALS...")
@@ -314,7 +314,7 @@ while True:
                 best_put,
             )
 
-        LAST_ALERT_FILE = "last_alert.txt"
+        LAST_ALERT_FILE = "last_trade_alert.txt"
 
         last_alert = ""
         if os.path.exists(LAST_ALERT_FILE):
