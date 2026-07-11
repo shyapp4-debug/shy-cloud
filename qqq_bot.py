@@ -11,8 +11,9 @@ from scanner import load_watchlist, scan_watchlist
 from signals import get_signal
 from emailer import send_email
 from dashboard import show_dashboard
-EMAIL_ADDRESS = "shyapp4@gmail.com"
-EMAIL_PASSWORD = "vtbv mnpj jzgg ctqy"
+EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+SEND_TO = os.getenv("SEND_TO")
 TEST_MODE = False
 if TEST_MODE: 
     print("🧪 TEST MODE ENABLED")
