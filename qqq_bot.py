@@ -1,3 +1,4 @@
+from trade_logger import log_trade
 from emailer import send_email
 import yfinance as yf
 import os
@@ -39,6 +40,7 @@ last_stop = None
 signal = "NO TRADE"
 setup_score = 0
 trade_grade = "N/A"
+
 entry = 0
 stop = 0
 target_price = 0
@@ -350,7 +352,16 @@ while True:
                 TQQQ: {prices.get('TQQQ', 0)}
                 """
             )
-
+            log_trade(
+            top_ticker,
+            trade_direction,
+            signal,
+            entry,
+            stop,
+            target_price,
+            trade_grade,
+            confidence,
+            )
             with open(LAST_ALERT_FILE, "w") as f:
                 f.write(current_alert)
             print("EMAIL SENT SUCCESSFULLY")
