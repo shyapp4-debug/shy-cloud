@@ -10,7 +10,6 @@ from datetime import datetime
 from market import get_market_bias
 from scanner import load_watchlist, scan_watchlist
 from signals import get_signal
-from emailer import send_email
 from dashboard import show_dashboard
 EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
