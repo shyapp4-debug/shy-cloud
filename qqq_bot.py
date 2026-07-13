@@ -23,16 +23,23 @@ if TEST_MODE:
     confidence = 100
 SEND_TO = "cecilshy8@yahoo.com"
 def send_email(subject, body):
-    msg = MIMEText(body)
-    msg["Subject"] = subject
-    msg["From"] = EMAIL_ADDRESS
-    msg["To"] = SEND_TO
+    try:
+        msg = MIMEText(body)
+        msg["Subject"] = subject
+        msg["From"] = EMAIL_ADDRESS
+        msg["To"] = SEND_TO
+        
+        server = smtplib.SMTP("smtp.gmail.com", 587, timeout=15)
+        server.starttls()
+        server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+        server.sendmail(EMAIL_ADDRESS, SEND_TO, msg.as_string())
+        server.quit()
 
-    server = smtplib.SMTP("smtp.gmail.com", 587)
-    server.starttls()
-    server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-    server.sendmail(EMAIL_ADDRESS, SEND_TO, msg.as_string())
-    server.quit()
+        print("EMAIL SENT SUCCESSFULLY", flush=True)
+
+    except Exception as error:
+        print(f"EMAIL SKIPPED: {error}", flush=True)
+        
 last_signal = None
 last_target = None
 last_stop = None
