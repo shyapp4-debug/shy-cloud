@@ -1,32 +1,55 @@
-def show_dashboard(prices, market_bias, bias_score, confidence, trade_grade, setup_score, trade_direction, top_ticker, top_price, best_call, best_put):
-    print("\n" + "="*55)
-    print(" SHY AI MARKET DASHBOARD")
-    print("="*55)
-    
-    print(f"Market Bias : {market_bias}")
-    print(f"Bias Score : {bias_score}")
-    print(f"Confidence : {confidence}%")
-    print(f"Trade Grade : {trade_grade}")
-    print(f"Setup Score : {setup_score}/5")
-    print(f"Direction : {trade_direction}")
-    
-    print("\n" + "-"*55)
-    print("WATCHLIST")
-    print("-"*55)
+from flask import Flask
+import pandas as pd
+import os
 
-    for ticker, price in prices.items():
-        print(f"{ticker:<8} ${price:>8.2f}")
+app = Flask(__name__)
 
-        print("\n" + "-"*55)
-        print("TOP PICK")
-        print("-"*55)
-        print(f"Ticker : {top_ticker}")
-        print(f"Price : ${top_price:.2f}")
-        
-        print("\n" + "-"*55)
-        print("LEADERBOARD")
-        print("-"*55)
-        print(f"Best CALL : {best_call}")
-        print(f"Best PUT : {best_put}")
-    
-        print("\n" + "="*55)
+@app.route("/")
+def dashboard():
+    if os.path.exists("shy_trade_log.csv"):
+        df = pd.read_csv("shy_trade_log.csv")
+        table = df.tail(20).to_html(index=False)
+    else:
+        table = "<h3>No trades yet.</h3>"
+
+    return f"""
+    <html>
+    <head>
+        <title>SHY Dashboard</title>
+        <style>
+            body {{
+                background:#111;
+                color:white;
+                font-family:Arial;
+                padding:30px;
+            }}
+            h1 {{
+                color:#00ff66;
+            }}
+            table {{
+                border-collapse:collapse;
+                width:100%;
+                background:white;
+                color:black;
+            }}
+            th,td {{
+                border:1px solid #ccc;
+                padding:8px;
+                text-align:center;
+            }}
+        </style>
+    </head>
+
+    <body>
+        <h1>SHY LIVE DASHBOARD</h1>
+
+        <h2>Latest Trades</h2>
+
+        {table}
+
+    </body>
+    </html>
+    """
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
