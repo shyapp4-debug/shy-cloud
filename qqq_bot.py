@@ -10,7 +10,7 @@ from datetime import datetime
 from market import get_market_bias
 from scanner import load_watchlist, scan_watchlist
 from signals import get_signal
-from dashboard import show_dashboard
+# from dashboard import show_dashboard
 EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 SEND_TO = os.getenv("SEND_TO")
@@ -302,19 +302,19 @@ while True:
         else:
             print(f"SENDING {top_ticker} CALL ALERT EMAIL NOW")
 
-            show_dashboard(
-                prices,
-                market_bias,
-                bias_score,
-                confidence,
-                trade_grade,
-                setup_score,
-                trade_direction,
-                top_ticker,
-                top_price,
-                best_call,
-                best_put,
-            )
+            # show_dashboard(
+            #     prices,
+            #     market_bias,
+            #     bias_score,
+            #     confidence,
+            #     trade_grade,
+            #     setup_score,
+            #     trade_direction,
+            #     top_ticker,
+            #     top_price,
+            #     best_call,
+            #     best_put,
+            # )
 
         LAST_ALERT_FILE = "last_trade_alert.txt"
 
