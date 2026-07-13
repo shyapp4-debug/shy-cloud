@@ -250,7 +250,7 @@ def get_live_prices():
     for symbol in symbols:
         try:
             ticker = yf.Ticker(symbol)
-            data = ticker.history(period="1d", interval="1m")
+            data = ticker.history(period="5d", interval="1d")
 
             if not data.empty:
                 prices[symbol] = round(float(data["Close"].iloc[-1]), 2)
