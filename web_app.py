@@ -259,7 +259,8 @@ def get_live_prices():
 
         except Exception:
             prices[symbol] = "Unavailable"
-
+            
+    print(prices)
     return prices
 @app.route("/")
 def dashboard():
