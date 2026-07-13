@@ -145,7 +145,22 @@ DASHBOARD_HTML = """
             <div class="value">{{ latest_grade }}</div>
         </div>
     </div>
+<h2>Live Market Prices</h2>
 
+<div class="stats-grid">
+    {% for symbol, price in live_prices.items() %}
+    <div class="stat-card">
+        <div class="stat-label">{{ symbol }}</div>
+        <div class="stat-value">
+            {% if price == "Unavailable" %}
+                {{ price }}
+            {% else %}
+                ${{ "%.2f"|format(price) }}
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
     <h2>Recent Trade Alerts</h2>
 
     <div class="table-box">
