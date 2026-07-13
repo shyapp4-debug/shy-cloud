@@ -1,3 +1,4 @@
+import yfinance as yf
 import csv
 import os
 import threading
@@ -193,9 +194,27 @@ DASHBOARD_HTML = """
 </body>
 </html>
 """
+def get_live_prices():
+    symbols = ["SPY", "QQQ", "AAPL", "TSLA", "IONQ", "MU"]
+    prices = {}
 
+    for symbol in symbols:
+        try:
+            ticker = yf.Ticker(symbol)
+            data = ticker.history(period="1d", interval="1m")
+
+            if not data.empty:
+                prices[symbol] = round(float(data["Close"].iloc[-1]), 2)
+            else:
+                prices[symbol] = "Unavailable"
+
+        except Exception:
+            prices[symbol] = "Unavailable"
+
+    return prices
 @app.route("/")
 def dashboard():
+    live_prices = get_live_prices()
     trades = load_trades()
     recent_trades = list(reversed(trades[-20:]))
 
@@ -214,6 +233,7 @@ def dashboard():
       open_trades=open_trades,
       latest_ticker=latest_trade.get("ticker", "—"),
       latest_grade=latest_trade.get("grade", "—"),
+      live_prices=live_prices,
     )
 
 if __name__ == "__main__":
