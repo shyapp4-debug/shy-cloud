@@ -370,7 +370,6 @@ while True:
             )
             with open(LAST_ALERT_FILE, "w") as f:
                 f.write(current_alert)
-            print("EMAIL SENT SUCCESSFULLY")
         
         last_signal = signal
         
