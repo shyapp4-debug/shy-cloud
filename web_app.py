@@ -113,6 +113,38 @@ DASHBOARD_HTML = """
             padding: 28px;
             color: #aeb7c4;
         }
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 16px 0 28px;
+}
+
+.market-card {
+    background: #182231;
+    border: 1px solid #34445a;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.market-symbol {
+    color: #9aa9bc;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.market-price {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+@media (max-width: 700px) {
+    .market-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
     </style>
 </head>
 
@@ -147,13 +179,14 @@ DASHBOARD_HTML = """
     </div>
 <h2>Live Market Prices</h2>
 
-<div class="stats-grid">
+<div class="market-grid">
     {% for symbol, price in live_prices.items() %}
-    <div class="stat-card">
-        <div class="stat-label">{{ symbol }}</div>
-        <div class="stat-value">
+    <div class="market-card">
+        <div class="market-symbol">{{ symbol }}</div>
+
+        <div class="market-price">
             {% if price == "Unavailable" %}
-                {{ price }}
+            {{ price }}
             {% else %}
                 ${{ "%.2f"|format(price) }}
             {% endif %}
@@ -161,7 +194,8 @@ DASHBOARD_HTML = """
     </div>
     {% endfor %}
 </div>
-    <h2>Recent Trade Alerts</h2>
+ 
+<h2>Recent Trade Alerts</h2>
 
     <div class="table-box">
         {% if trades %}
