@@ -326,8 +326,13 @@ def dashboard():
         latest_confidence=latest_confidence,
         live_prices=live_prices,
         market_bias=market_bias,
-        bias_score=bias_score,=latest_signal,
-    )
+        bias_score=bias_score,
+        latest_signal=latest_signal,
+        latest_entry=latest_entry,
+        latest_stop=latest_stop,
+        latest_target=latest_target,
+        latest_confidence=latest_confidence,
+        )
 
 if __name__ == "__main__":
     bot_thread = threading.Thread(
