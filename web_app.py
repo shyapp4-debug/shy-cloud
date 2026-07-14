@@ -313,7 +313,7 @@ def dashboard():
     latest_confidence = latest_trade.get("confidence", "--")
 
     return render_template_string(
-    DASHBOARD_HTML,
+        DASHBOARD_HTML,
         trades=recent_trades,
         total_trades=total_trades,
         open_trades=open_trades,
@@ -327,7 +327,7 @@ def dashboard():
         live_prices=live_prices,
         market_bias=market_bias,
         bias_score=bias_score,
-        )
+    )
 
 if __name__ == "__main__":
     bot_thread = threading.Thread(
