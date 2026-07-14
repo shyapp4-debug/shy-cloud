@@ -332,6 +332,15 @@ while True:
         
         current_alert = f"{top_ticker}_{signal}"
 
+        top_ticker = "QQQ"
+        signal = "TEST BREAKOUT"
+        trade_direction = "CALL"
+        entry = 721.34
+        stop = 719.00
+        target_price = 725.00
+        trade_grade = "A"
+        confidence = 90
+
         if signal != "NO TRADE" and current_alert != last_alert:
             send_email(
                 f"SHY {top_ticker} CALL ALERT",
