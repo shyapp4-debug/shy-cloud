@@ -174,34 +174,24 @@ DASHBOARD_HTML = """
 
         <div class="card">
             <div class="label">Latest Grade</div>
-            <div class="card">
-                <div class="label">Latest Grade</div>
-                <div class="value">{{ latest_grade }}</div>
-            </div>
-
-            <div class="card">
-                <div class="label">Latest Signal</div>
-                <div class="value">{{ latest_signal }}</div>
-                <div class="label">Entry: {{ latest_entry }}</div>
-                <div class="label">Stop: {{ latest_stop }}</div>
-                <div class="label">Target: {{ latest_target }}</div>
-                <div class="label">Confidence: {{ latest_confidence }}%</div>
-             </div>
-
-            <div class="card">
-                <div class="label">Market Bias</div>
-                <div class="value">{{ market_bias }}</div>
-                <div class="label">Score: {{ bias_score }}/3</div>
-            </div>
             <div class="value">{{ latest_grade }}</div>
         </div>
-        
+
+        <div class="card">
+            <div class="label">Latest Signal</div>
+            <div class="value">{{ latest_signal }}</div>
+            <div class="label">Entry: {{ latest_entry }}</div>
+            <div class="label">Stop: {{ latest_stop }}</div>
+            <div class="label">Target: {{ latest_target }}</div>
+            <div class="label">Confidence: {{ latest_confidence }}%</div>
+        </div>
+
         <div class="card">
             <div class="label">Market Bias</div>
             <div class="value">{{ market_bias }}</div>
             <div class="label">Score: {{ bias_score }}/3</div>
         </div>
-    </div>
+        
 <h2>Live Market Prices</h2>
 
 <div class="market-grid">
