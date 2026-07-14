@@ -297,16 +297,27 @@ def dashboard():
 
     latest_trade = trades[-1] if trades else {}
 
+    latest_signal = latest_trade.get("signal", "NO TRADE")
+    latest_entry = latest_trade.get("entry", "--")
+    latest_stop = latest_trade.get("stop", "--")
+    latest_target = latest_trade.get("target", "--")
+    latest_confidence = latest_trade.get("confidence", "--")
+
     return render_template_string(
-      DASHBOARD_HTML,
-      trades=recent_trades,
-      total_trades=total_trades,
-      open_trades=open_trades,
-      latest_ticker=latest_trade.get("ticker", "—"),
-      latest_grade=latest_trade.get("grade", "—"),
-      live_prices=live_prices,
-      market_bias=market_bias,
-      bias_score=bias_score,
+    DASHBOARD_HTML,
+        trades=recent_trades,
+        total_trades=total_trades,
+        open_trades=open_trades,
+        latest_ticker=latest_trade.get("ticker", "--"),
+        latest_grade=latest_trade.get("grade", "--"),
+        latest_signal=latest_signal,
+        latest_entry=latest_entry,
+        latest_stop=latest_stop,
+        latest_target=latest_target,
+        latest_confidence=latest_confidence,
+        live_prices=live_prices,
+        market_bias=market_bias,
+        bias_score=bias_score,=latest_signal,
     )
 
 if __name__ == "__main__":
