@@ -176,6 +176,12 @@ DASHBOARD_HTML = """
             <div class="label">Latest Grade</div>
             <div class="value">{{ latest_grade }}</div>
         </div>
+        
+        <div class="card">
+            <div class="label">Market Bias</div>
+            <div class="value">{{ market_bias }}</div>
+            <div class="label">Score: {{ bias_score }}/3</div>
+        </div>
     </div>
 <h2>Live Market Prices</h2>
 
@@ -266,6 +272,20 @@ def get_live_prices():
 @app.route("/")
 def dashboard():
     live_prices = get_live_prices()
+        spy_price = live_prices.get("SPY")
+        qqq_price = live_prices.get("QQQ")
+
+        if isinstance(spy_price, (int, float)) and isinstance(qqq_price, (int, float)):
+            market_bias = "BULLISH"
+            bias_score = 2
+
+            if spy_price > 750 and qqq_price > 710:
+                market_bias = "STRONG BULLISH"
+                bias_score = 3
+        else:
+            market_bias = "UNAVAILABLE"
+            bias_score = 0
+            
     trades = load_trades()
     recent_trades = list(reversed(trades[-20:]))
 
@@ -285,6 +305,8 @@ def dashboard():
       latest_ticker=latest_trade.get("ticker", "—"),
       latest_grade=latest_trade.get("grade", "—"),
       live_prices=live_prices,
+      market_bias=market_bias,
+      bias_score=bias_score,
     )
 
 if __name__ == "__main__":
