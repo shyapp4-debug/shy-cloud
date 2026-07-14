@@ -47,3 +47,14 @@ def log_trade(
       ])
 
   print("TRADE SAVED TO SHY JOURNAL")
+if __name__ == "__main__":
+    log_trade(
+        "QQQ",
+        "CALL",
+        "TEST BREAKOUT",
+        721.34,
+        719.00,
+        725.00,
+        "A",
+        90,
+    )
