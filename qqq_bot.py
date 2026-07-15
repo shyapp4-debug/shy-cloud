@@ -329,8 +329,6 @@ while True:
         if os.path.exists(LAST_ALERT_FILE):
             with open(LAST_ALERT_FILE, "r") as f:
                 last_alert = f.read().strip()
-        
-        current_alert = f"{top_ticker}_{signal}"
 
         top_ticker = "QQQ"
         signal = "TEST BREAKOUT"
@@ -340,7 +338,9 @@ while True:
         target_price = 725.00
         trade_grade = "A"
         confidence = 90
-
+        
+        current_alert = f"{top_ticker}_{signal}"
+        
         if signal != "NO TRADE" and current_alert != last_alert:
             send_email(
                 f"SHY {top_ticker} CALL ALERT",
