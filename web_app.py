@@ -194,20 +194,48 @@ DASHBOARD_HTML = """
         
 <h2>Live Market Prices</h2>
 
-<div class="market-grid">
-    {% for symbol, price in live_prices.items() %}
-    <div class="market-card">
-        <div class="market-symbol">{{ symbol }}</div>
+        <div class="market-grid">
+        {% for symbol, price in live_prices.items() %}
 
-        <div class="market-price">
+        <div class="market-card">
+
+            <div class="market-symbol">
+                {{ symbol }}
+            </div>
+
             {% if price == "Unavailable" %}
-            {{ price }}
+
+            <div class="market-price">
+                {{ price }}
+            </div>
+
             {% else %}
+
+            <div class="market-price">
                 ${{ "%.2f"|format(price) }}
-            {% endif %}
-        </div>
-    </div>
-    {% endfor %}
+         </div>
+
+{% if symbol == "SPY" and price >= 750 %}
+<div style="color:#44d17a;font-weight:bold;margin-top:8px;">
+▲ Bullish
+</div>
+
+{% elif symbol == "QQQ" and price >= 710 %}
+<div style="color:#44d17a;font-weight:bold;margin-top:8px;">
+▲ Bullish
+</div>
+
+{% else %}
+<div style="color:#ff6961;font-weight:bold;margin-top:8px;">
+▼ Neutral
+</div>
+{% endif %}
+
+{% endif %}
+
+</div>
+
+{% endfor %}
 </div>
  
 <h2>Recent Trade Alerts</h2>
@@ -259,23 +287,34 @@ DASHBOARD_HTML = """
 </html>
 """
 def get_live_prices():
-    symbols = ["SPY", "QQQ", "AAPL", "TSLA", "IONQ", "MU"]
+    symbols = [
+        "SPY",
+        "QQQ",
+        "AAPL",
+        "TSLA",
+        "IONQ",
+        "MU",
+        "AMD",
+        "NVDA",
+        "PLTR",
+    ]
+
     prices = {}
 
     for symbol in symbols:
         try:
             ticker = yf.Ticker(symbol)
-            data = ticker.history(period="5d", interval="1d")
 
-            if not data.empty:
-                prices[symbol] = round(float(data["Close"].iloc[-1]), 2)
-            else:
-                prices[symbol] = "Unavailable"
+        if ticker.fast_info.get("lastPrice"):
+            prices[symbol] = round(
+                float(ticker.fast_info["lastPrice"]), 2
+            )
+        else:
+            prices[symbol] = "Unavailable"
 
         except Exception:
             prices[symbol] = "Unavailable"
-            
-    print(prices, flush=True)
+
     return prices
     
 @app.route("/")
