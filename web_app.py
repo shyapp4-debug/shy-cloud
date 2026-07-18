@@ -191,8 +191,12 @@ DASHBOARD_HTML = """
             <div class="value">{{ market_bias }}</div>
             <div class="label">Score: {{ bias_score }}/3</div>
         </div>
+
+        </div>
         
-<h2>Live Market Prices</h2>
+        <div style="width:100%; margin-top:30px;">
+            <h2>Live Market Prices</h2>
+        <div>
 
         <div class="market-grid">
         {% for symbol, price in live_prices.items() %}
@@ -238,7 +242,9 @@ DASHBOARD_HTML = """
 {% endfor %}
 </div>
  
-<h2>Recent Trade Alerts</h2>
+<div style="width:100%; margin-top:30px; clear:both;">
+    <h2>Recent Trade Alerts</h2>
+</div>
 
     <div class="table-box">
         {% if trades %}
