@@ -196,7 +196,7 @@ DASHBOARD_HTML = """
         
         <div style="width:100%; margin-top:30px;">
             <h2>Live Market Prices</h2>
-        <div>
+        </div>
 
         <div class="market-grid">
         {% for symbol, price in live_prices.items() %}
@@ -292,6 +292,7 @@ DASHBOARD_HTML = """
 </body>
 </html>
 """
+
 def get_live_prices():
     symbols = [
         "SPY",
@@ -311,19 +312,20 @@ def get_live_prices():
         try:
             ticker = yf.Ticker(symbol)
 
-        if ticker.fast_info.get("lastPrice"):
-            prices[symbol] = round(
-                float(ticker.fast_info["lastPrice"]), 2
-            )
-        else:
-            prices[symbol] = "Unavailable"
+    if ticker.fast_info.get("lastPrice"):
+        prices[symbol] = round(
+            float(ticker.fast_info["lastPrice"]), 2
+        )
+    else:
+        prices[symbol] = "Unavailable"
 
-        except Exception:
-            prices[symbol] = "Unavailable"
+except Exception:
+    prices[symbol] = "Unavailable"
 
-    return prices
+return prices return prices
     
 @app.route("/")
+
 def dashboard():
     live_prices = get_live_prices()
     spy_price = live_prices.get("SPY")
