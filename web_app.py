@@ -115,7 +115,7 @@ DASHBOARD_HTML = """
         }
 .market-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 14px;
     margin: 16px 0 28px;
 }
