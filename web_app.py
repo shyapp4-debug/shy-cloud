@@ -179,10 +179,14 @@ DASHBOARD_HTML = """
 
         <div class="card">
             <div class="label">Current Recommendation</div>
-            <div class="value">{{ latest_signal }}</div>
+            <div class="value">{{ shy_decision }}</div>
 
         <div class="label" style="margin-top:10px;">
             Market Bias: {{ market_bias }}
+        </div>
+        
+        <div class="label" style="margin-top:10px;">
+            Reason: {{ shy_reason }}
         </div>
         
         <div class="label">Entry: {{ latest_entry }}</div>
@@ -190,7 +194,7 @@ DASHBOARD_HTML = """
         <div class="label">Target: {{ latest_target }}</div>
         
         <div style="margin-top:10px;color:#22c55e;">
-            Confidence: {{ latest_confidence }}%
+            Confidence: {{ shy_confidence }}%
         </div>
     </div>
 
@@ -285,6 +289,15 @@ def get_live_prices():
             
     print(prices, flush=True)
     return prices
+
+def get_shy_decision(market_bias, bias_score):
+    if market_bias == "STRONG BULLISH" and bias_score == 3:
+        return "WATCH CALL", 70, "Strong bullish market bias detected."
+    
+    if market_bias == "BULLISH" and bias_score == 2:
+        return "WAIT", 55, "Bullish conditions are present, but more confirmation is needed."
+    
+    return "WAIT", 40, "Market conviction is too low for a trade setup."
     
 @app.route("/")
 def dashboard():
@@ -305,7 +318,9 @@ def dashboard():
             
     trades = load_trades()
     recent_trades = list(reversed(trades[-20:]))
-
+    
+    shy_decision, shy_confidence, shy_reason = get_shy_decision(market_bias, bias_score)
+    
     total_trades = len(trades)
     open_trades = sum(
         1 for trade in trades
@@ -335,7 +350,10 @@ def dashboard():
         live_prices=live_prices,
         market_bias=market_bias,
         bias_score=bias_score,
-    )
+        shy_decision=shy_decision,
+        shy_confidence=shy_confidence,
+        shy_reason=shy_reason,
+        )
 
 if __name__ == "__main__":
     bot_thread = threading.Thread(
