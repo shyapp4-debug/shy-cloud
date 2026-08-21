@@ -178,13 +178,21 @@ DASHBOARD_HTML = """
         </div>
 
         <div class="card">
-            <div class="label">Latest Signal</div>
+            <div class="label">Current Recommendation</div>
             <div class="value">{{ latest_signal }}</div>
-            <div class="label">Entry: {{ latest_entry }}</div>
-            <div class="label">Stop: {{ latest_stop }}</div>
-            <div class="label">Target: {{ latest_target }}</div>
-            <div class="label">Confidence: {{ latest_confidence }}%</div>
+
+        <div class="label" style="margin-top:10px;">
+            Market Bias: {{ market_bias }}
         </div>
+        
+        <div class="label">Entry: {{ latest_entry }}</div>
+        <div class="label">Stop: {{ latest_stop }}</div>
+        <div class="label">Target: {{ latest_target }}</div>
+        
+        <div style="margin-top:10px;color:#22c55e;">
+            Confidence: {{ latest_confidence }}%
+        </div>
+    </div>
 
         <div class="card">
             <div class="label">Market Bias</div>
